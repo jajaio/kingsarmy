@@ -4,7 +4,6 @@ import time as t
 import colors as c
 import field as f
 import load
-import tower
 
 author='jajaio'
 
@@ -57,7 +56,6 @@ def hub():
     elif hubquestion=="4":
         print(c.yellow+"You take a lantern and travel to the old tower.")
         t.sleep(1.25)
-        tower.tower()
     else:
         print("I don't understand...")
         t.sleep(1)
