@@ -9,8 +9,9 @@ def load_game():
         cl.Player.deff=j['deff']
         cl.Player.att=j['att']
         cl.Player.mp=j['mp']
-        cl.Player.gold=j['gold']
+        cl.Player.xp=j['xp']
         cl.Player.name=j['name']
+        cl.Player.lvl=j['lvl']
 
 if __name__=='__main__':
     load_game()

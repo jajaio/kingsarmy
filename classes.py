@@ -12,6 +12,7 @@ class Player(Thing):
     xp=0
     lvl=1
     name=None
+    dragon=None
 
 class Foe(Thing):
     mname="Test mob name"
@@ -76,7 +77,7 @@ class DeathSkull(Foe):
     att=12
     deff=1
 
-class King():
+class King(Foe):
     mname='King of the Skulls'
     hp=60
     #learn more about the character before cont.

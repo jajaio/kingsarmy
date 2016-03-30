@@ -43,9 +43,21 @@ heroatt2='''
  / /
 '''
 dragon1='''
-      0
-     /|\\    >
-   =========/
+\\    O    /
+ \\  \\|/  /
+  \\_^v^_/
+
+
+
+'''
+dragon2='''
+     O
+    \\|/
+   _^v^_
+  /     \\
+ /       \\
+/         \\
+'''
 heromp1='''
    <3
 
@@ -104,7 +116,15 @@ def foeattanim():
         print(foeatt2)
         t.sleep(.25)
         print(c.clear)
-
+def dragonanim():
+    for count in range(2):
+        print(c.clear)
+        print(c.blue+dragon1)
+        t.sleep(.5)
+        print(c.clear)
+        print(dragon2)
+        t.sleep(.5)
+        print(c.clear)
 def foempanim():
     for count in range(2):
         print(c.clear)
@@ -136,6 +156,8 @@ def playermpanim():
         print(c.clear)
         
 if __name__=='__main__':
+    print('You fly away.')
+    dragonanim()
     print("The Player attacks!")
     t.sleep(1)
     playerattanim()

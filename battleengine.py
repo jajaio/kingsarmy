@@ -5,7 +5,7 @@ import time as t
 import anim
 import save
 import load
-import field as f
+import torch
 author="jajaio"
 
 
@@ -73,11 +73,11 @@ def scanner():
         t.sleep(1)
         ter=input(c.yellow+"Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()
         if ter == '1':
-            f.field()
+            torch.island()
         elif ter == '2':
             exit()
         else:
-            f.field()
+            torch.island()
     elif monster.hp < 1:
         print(c.yellow+"You won!")
         t.sleep(1)
@@ -87,7 +87,7 @@ def scanner():
         t.sleep(1)
         save.save_game()
         input('[Game Saved! Press enter to continue.]')
-        f.field()
+        torch.island()
 
 def fight():
     global q, player, monster
@@ -98,7 +98,7 @@ def fight():
         if player.hp < 1:                                                                                                                                                                            
             print("You Died!")                                                                                                                                                                       
             t.sleep(1)                                                                                                                                                                               
-            ter=input("Do you want to keep playing, or quit? (1), (2)")                                                                                                                              
+            ter=input("Do you want to keep playing, or quit? (1), (2)").strip()                                                                                                                              
             if ter == '1':                                                                                                                                                                           
                 break                                                                                                                                                                                
             elif ter == '2':                                                                                                                                                                         
@@ -130,6 +130,5 @@ def fight():
                 pmove()
 
 if __name__=='__main__':
-    cl.Player=cl.Lost
     cl.Foe=cl.Slime
     fight()

@@ -10,8 +10,10 @@ def save_game():
             "deff":cl.Player.deff,
             "att":cl.Player.att,
             "mp":cl.Player.mp,
-            "gold":cl.Player.gold,
-            "name":cl.Player.name
+            "xp":cl.Player.xp,
+            "name":cl.Player.name,
+            "lvl":cl.Player.lvl,
+            "dragon":cl.Player.dragon
             }))
         
 if __name__=='__main__':

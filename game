@@ -37,7 +37,12 @@ def neworload():
         if qwa=="y":
             os.system('rm player.json')
             os.system('touch player.json')
-            cl.Player=cl.Lost
+            cl.Player.hp=10
+            cl.Player.agi=1
+            cl.Player.att=1
+            cl.Player.deff=0
+            cl.Player.mp=0
+            cl.Player.lvl=1
             save.save_game()
             nameask()
         elif qwa=="n":
@@ -63,21 +68,30 @@ def neworload():
         neworload()
 
 def intro():
-    print('Some story plot here!')
+    print(c.yellow+'Some story plot here!')
+    t.sleep(1)
     save.save_game()
-    load.load_game()
     town.hub()
+
+def dask():
+    dragon_question=input(c.yellow+'What would you like to name your dragon?'+c.reset+' >>>'+c.violet).strip().title()
+    confrim=input(c.yellow+"So the dragon's name is "+c.blue+dragon_question+c.yellow+"?"+c.reset+"(Y/N) >>>"+c.violet).strip().lower()
+    if confrim=="y":
+        cl.Player.dragon=dragon_question
+        intro()
+    elif confrim=='n':
+        dask()
+    else:
+        print("I don't understand... type Y for yes and N for no.")
+        t.sleep(1.5)
+        nameask()
 
 def nameask():
     name_question=input(c.yellow+"What is your name? "+c.reset+ ">>>"+c.violet).strip().title()
     confirm=input(c.yellow+"Oh, so your name is "+c.blue+name_question+c.yellow+"?"+c.reset+"(Y/N) >>>"+c.violet).strip().lower()
     if confirm=="y":
         cl.Player.name=name_question
-        input(c.yellow+"Okay "+c.blue+cl.Player.name+c.yellow+", your adventure is about to start. Press enter to start!")
-        cl.Player.gold=0
-        cl.Player.gold+=100
-        save.save_game()
-        intro()
+        dask()
     elif confirm=="n":
         nameask()
     else:
