@@ -100,13 +100,14 @@ foeatt1='''
 '''
 
 foeatt2='''
-     |                                                                                                                     
-     |                                                                                                                                   
-     +___6_\\                                                                                                                           
-         |                                                                                                                              
-         |                                                                                                                              
+     | 
+     |
+     +___6_\\
+         |
+         |
         \\ \\  
 '''
+
 def foeattanim():
     for count in range(2):
         print(c.clear)
@@ -116,6 +117,7 @@ def foeattanim():
         print(foeatt2)
         t.sleep(.25)
         print(c.clear)
+
 def dragonanim():
     for count in range(2):
         print(c.clear)
@@ -125,6 +127,7 @@ def dragonanim():
         print(dragon2)
         t.sleep(.5)
         print(c.clear)
+
 def foempanim():
     for count in range(2):
         print(c.clear)
@@ -132,6 +135,22 @@ def foempanim():
         t.sleep(.25)
         print(c.clear)
         print(foemp2)
+        t.sleep(.25)
+        print(c.clear)
+
+def archeranim():
+    for count in range(2):
+        print(c.clear)
+        print(c.blue+archer1)
+        t.sleep(.25)
+        print(c.clear)
+        print(archer2)
+        t.sleep(.25)
+        print(c.clear)
+        print(archer3)
+        t.sleep(.25)
+        print(c.clear)
+        print(archer4)
         t.sleep(.25)
         print(c.clear)
 
@@ -158,6 +177,9 @@ def playermpanim():
 if __name__=='__main__':
     print('You fly away.')
     dragonanim()
+    print("You shoot your bow.")
+    t.sleep(1)
+    archeranim()
     print("The Player attacks!")
     t.sleep(1)
     playerattanim()

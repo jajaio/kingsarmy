@@ -16,28 +16,43 @@ class Player(Thing):
 
 class Foe(Thing):
     mname="Test mob name"
+
 #Torch Island
+
 class Bandit(Foe):
+    mname='Bandit'
     hp=10
     agi=3
+    deff=0
     att=3
-
+    mp=0
+    
 class Slime(Foe):
+    mname='Slime'
     hp=5
     agi=0
+    deff=0
     att=1
+    mp=0
 
 class Goblin(Foe):
+    mname='Goblin'
     hp=12
     agi=2
     att=2
+    deff=0
+    mp=0
 
 class Blarney(Foe):
+    mname='Blarney'
     hp=20
     agi=0
     att=5
     deff=1
+    mp=0
+
 #Skull Woods
+
 class DarkSkull(Foe):
     hp=25
     agi=5
@@ -61,10 +76,12 @@ class Elyn(Foe):
     att=6
     mp=1
 #Ancient Dunes
+
 class DarkBat(Foe):
     hp=20
     agi=30
     att=10
+
 class DarkScorpion(Foe):
     hp=30
     agi=15
@@ -91,6 +108,7 @@ def show_player():
     Attack: {p.agi}
     Defense: {p.deff}
     Magic: {p.mp}
+    Dragon: {p.dragon}
     XP: {p.xp}
     '''
     print(yext.format(p=Player()))

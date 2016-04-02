@@ -81,10 +81,14 @@ def scanner():
     elif monster.hp < 1:
         print(c.yellow+"You won!")
         t.sleep(1)
-        curr=random.randint(10,25)
-        print("You got "+str(curr)+" XP!")
-        cl.Player.xp+=int(curr)
+        print("You got 75 XP!")
+        cl.Player.xp+=75
         t.sleep(1)
+        print("You pry the mask off of Blarney's head.")
+        t.sleep(1)
+        print("Dark energy flies everywhere.")
+        t.sleep(1)
+        print("You got an ancient skull!")
         save.save_game()
         input('[Game Saved! Press enter to continue.]')
         torch.island()
@@ -93,7 +97,7 @@ def fight():
     global q, player, monster
     load.load_game()
     player=cl.Player()
-    monster=cl.Foe()
+    monster=cl.Blarney()
     while True:
         if player.hp < 1:                                                                                                                                                                            
             print("You Died!")                                                                                                                                                                       
@@ -130,5 +134,5 @@ def fight():
                 pmove()
 
 if __name__=='__main__':
-    cl.Foe=cl.Slime
+    cl.Foe=cl.Blarney
     fight()

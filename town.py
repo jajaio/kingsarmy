@@ -37,6 +37,7 @@ def inn():
         inn()
 
 def hub():
+    load.load_game()
     print(c.clear)
     print(c.yellow+"You arive on the King's Great Dragon, KillFang.")
     hubquestion=input("Would you like to go back to your tent? The shrine? Or into the open skies? (1), (2), (3)"+c.reset+" >>>"+c.violet)
@@ -60,7 +61,33 @@ def hub():
 
 def shrine():
     print(c.clear)
-    #This is where the player can lvl up
-
+    print(c.yellow+"You are at the magical shrine.")
+    t.sleep(1)
+    shr=input("You currently have "+str(cl.Player.xp)+" XP. You need at least 100 to level up. Would you like to level up? (Y/N) "+c.reset+">>>"+c.violet).strip().lower()
+    if shr == 'y':
+        if int(cl.Player.xp) >= 100:
+            cl.Player.lvl += 1
+            cl.Player.hp += 1
+            cl.Player.att += 1
+            cl.Player.agi +=1
+            cl.Player.deff +=.2
+            cl.Player.xp -=100
+            print(c.yellow+"You are now level "+str(cl.Player.lvl)+"!")
+            cl.show_player()
+            save.save_game()
+            input('[Game Saved! Press enter to continue]')
+            arive()
+        elif int(cl.Player.xp) <= 100:
+            print(c.yellow+"You do not have enough XP!")
+            t.sleep(1.5)
+            hub()
+    elif shr == 'n':
+        print(c.yellow+'You leave the shrine.')
+        t.sleep(1)
+        hub()
+    else:
+        print(c.yellow+"I don't know what you mean...")
+        t.sleep(1)
+        shrine()
 if __name__=='__main__':
     hub()

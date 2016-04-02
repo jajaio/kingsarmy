@@ -12,7 +12,7 @@ def load_game():
         cl.Player.xp=j['xp']
         cl.Player.name=j['name']
         cl.Player.lvl=j['lvl']
-
+        cl.Player.dragon=j['dragon']
 if __name__=='__main__':
     load_game()
     cl.show_player()
