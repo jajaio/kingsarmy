@@ -79,19 +79,24 @@ def scanner():
         else:
             torch.island()
     elif monster.hp < 1:
-        print(c.yellow+"You won!")
-        t.sleep(1)
-        print("You got 75 XP!")
-        cl.Player.xp+=75
-        t.sleep(1)
-        print("You pry the mask off of Blarney's head.")
-        t.sleep(1)
-        print("Dark energy flies everywhere.")
-        t.sleep(1)
-        print("You got an ancient skull!")
-        save.save_game()
-        input('[Game Saved! Press enter to continue.]')
-        torch.island()
+        finish()
+
+def finish():        
+    print(c.yellow+"You won!")
+    t.sleep(1)
+    print("You got 75 XP!")
+    cl.Player.xp+=75
+    t.sleep(1)
+    print("You pry the mask off of Blarney's head.")
+    t.sleep(2)
+    print("Dark energy flies everywhere.")
+    t.sleep(2)
+    print("You got an ancient skull!")
+    cl.Player.skulls+=1
+    save.save_game()
+    t.sleep(2)
+    input('[Game Saved! Press enter to continue.]')
+    torch.island()
 
 def fight():
     global q, player, monster

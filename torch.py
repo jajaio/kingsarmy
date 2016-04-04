@@ -6,7 +6,9 @@ import time as t
 import sky
 import anim
 import blarneybattle
+
 author="jajaio"
+
 def random_monster():
     monsters=[cl.Slime, cl.Bandit, cl.Goblin]
     monster=random.choice(monsters)

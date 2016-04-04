@@ -64,21 +64,21 @@ def shrine():
     print(c.clear)
     print(c.yellow+"You are at the magical shrine.")
     t.sleep(1)
-    shr=input("You currently have "+str(cl.Player.xp)+" XP. You need at least 50 to level up. Would you like to level up? (Y/N) "+c.reset+">>>"+c.violet).strip().lower()
+    shr=input("You currently have "+str(cl.Player.xp)+" XP. You need at least "+str(cl.Player.xpreq)+" to level up. Would you like to level up? (Y/N) "+c.reset+">>>"+c.violet).strip().lower()
     if shr == 'y':
-        if int(cl.Player.xp) >= 50:
+        if int(cl.Player.xp) >= int(cl.Player.xpreq):
             cl.Player.lvl += 1
             cl.Player.hp += 1
             cl.Player.att += 1
             cl.Player.agi +=1
-            cl.Player.deff +=.2
-            cl.Player.xp -= 50
+            cl.Player.xp -= cl.Player.xpreq
+            cl.Player.xpreq +=10
             print(c.yellow+"You are now level "+str(cl.Player.lvl)+"!")
             cl.show_player()
             save.save_game()
             input('[Game Saved! Press enter to continue]')
             shrine()
-        elif int(cl.Player.xp) <= 100:
+        elif int(cl.Player.xp) <= cl.Player.xpreq:
             print(c.yellow+"You do not have enough XP!")
             t.sleep(1.5)
             hub()

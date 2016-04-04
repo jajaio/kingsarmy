@@ -13,6 +13,10 @@ def load_game():
         cl.Player.name=j['name']
         cl.Player.lvl=j['lvl']
         cl.Player.dragon=j['dragon']
+        cl.Player.xpreq=j['xpreq']
+        cl.Player.skulls=j['skulls']
+
+
 if __name__=='__main__':
     load_game()
     cl.show_player()

@@ -112,7 +112,9 @@ def fight():
             gain=random.randint(10,25)                                                                                                                                                               
             print("You got "+str(gain)+" XP!")                                                                                                                                                     
             cl.Player.xp+=int(gain)                                                                                                                                                                
-            t.sleep(1)                                                                                                                                                                               
+            t.sleep(1)
+            print("You now have "+str(cl.Player.xp)+" XP!")
+            t.sleep(1)
             save.save_game()                                                                                                                                                                         
             input('[Game Saved! Press enter to continue.]')                                                                                                                                          
             break     

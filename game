@@ -43,6 +43,8 @@ def neworload():
             cl.Player.deff=0
             cl.Player.mp=0
             cl.Player.lvl=1
+            cl.Player.xpreq=50
+            cl.Player.skulls=0
             save.save_game()
             nameask()
         elif qwa=="n":
@@ -68,7 +70,9 @@ def neworload():
         neworload()
 
 def intro():
-    print(c.yellow+'Some story plot here!')
+    print(c.yellow+"This game is dedicated to Samuel Mock. Happy birthday, buddy <3.")
+    t.sleep(1)
+    print('Some story plot here!')
     t.sleep(1)
     save.save_game()
     town.hub()

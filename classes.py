@@ -13,6 +13,8 @@ class Player(Thing):
     lvl=1
     name=None
     dragon=None
+    xpreq=0
+    skulls=0
 
 class Foe(Thing):
     mname="Test mob name"
@@ -99,6 +101,15 @@ class King(Foe):
     hp=60
     #learn more about the character before cont.
 
+#Tutorial Dark Skull
+class TutorialDarkSkull(Foe):
+    mname='Dark Skull'
+    hp=5
+    agi=0
+    att=1
+    deff=0
+    mp=0
+
 def show_player():    
     yext='''
     {p.name} Stats:
@@ -109,6 +120,7 @@ def show_player():
     Defense: {p.deff}
     Magic: {p.mp}
     Dragon: {p.dragon}
+    Ancient Skulls: {p.skulls}
     XP: {p.xp}
     '''
     print(yext.format(p=Player()))

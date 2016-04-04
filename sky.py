@@ -19,9 +19,11 @@ def select():
         torch.island()
     elif where == '2':
         print('Still In development.')
+        t.sleep(2)
         select()
     elif where == '3':
         print('Still in development.')
+        t.sleep(2)
         select()
     elif where == '4':
         print(c.yellow+'You fly back to KillFang.')
