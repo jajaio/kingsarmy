@@ -16,7 +16,7 @@ def island():
     print(c.clear)
     print(c.yellow+"You arive on Torch island.")
     t.sleep(1)
-    f=input(c.yellow+"Do you want to look for monsters? Travel up the volcano? Or fly back to the skies? (1), (2)"+c.reset+" >>>"+c.violet)
+    f=input(c.yellow+"Do you want to look for monsters? Travel up the volcano? Or fly back to the skies? (1), (2), (3)"+c.reset+" >>>"+c.violet)
     if f == "1":
         print(c.yellow+"You decide to look around.")
         t.sleep(1.5)
@@ -57,7 +57,7 @@ def island():
     else:
         print("I don't know what you mean....")
         t.sleep(1)
-        field()
+        island()
 
 if __name__=='__main__':
     island()

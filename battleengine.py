@@ -69,9 +69,9 @@ def pmove():
 
 def scanner():
     if player.hp < 1:
-        print("You Died!")
+        print(c.yellow+ "You Died!")
         t.sleep(1)
-        ter=input(c.yellow+"Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()
+        ter=input("Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()
         if ter == '1':
             torch.island()
         elif ter == '2':
@@ -81,9 +81,9 @@ def scanner():
     elif monster.hp < 1:
         print(c.yellow+"You won!")
         t.sleep(1)
-        curr=random.randint(10,25)
-        print("You got "+str(curr)+" XP!")
-        cl.Player.xp+=int(curr)
+        gain=random.randint(10,25)
+        print("You got "+str(gain)+" XP!")
+        cl.Player.xp+=int(gain)
         t.sleep(1)
         save.save_game()
         input('[Game Saved! Press enter to continue.]')
@@ -96,12 +96,13 @@ def fight():
     monster=cl.Foe()
     while True:
         if player.hp < 1:                                                                                                                                                                            
-            print("You Died!")                                                                                                                                                                       
+            print(c.yellow+"You Died!")                                                                                                                                                                       
             t.sleep(1)                                                                                                                                                                               
-            ter=input("Do you want to keep playing, or quit? (1), (2)").strip()                                                                                                                              
+            ter=input("Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()                                                                                          
             if ter == '1':                                                                                                                                                                           
-                break                                                                                                                                                                                
+                break                                                                                                                                                             
             elif ter == '2':                                                                                                                                                                         
+                print('[Exiting game...]')
                 exit()                                                                                                                                                                               
             else:                                                                                                                                                                                    
                 break                                                                                                                                                                                
@@ -110,7 +111,7 @@ def fight():
             t.sleep(1)                                                                                                                                                                               
             gain=random.randint(10,25)                                                                                                                                                               
             print("You got "+str(gain)+" XP!")                                                                                                                                                     
-            cl.Player.gold+=int(gain)                                                                                                                                                                
+            cl.Player.xp+=int(gain)                                                                                                                                                                
             t.sleep(1)                                                                                                                                                                               
             save.save_game()                                                                                                                                                                         
             input('[Game Saved! Press enter to continue.]')                                                                                                                                          

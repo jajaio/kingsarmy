@@ -21,10 +21,10 @@ class Foe(Thing):
 
 class Bandit(Foe):
     mname='Bandit'
-    hp=10
+    hp=7
     agi=3
     deff=0
-    att=3
+    att=2
     mp=0
     
 class Slime(Foe):
@@ -39,7 +39,7 @@ class Goblin(Foe):
     mname='Goblin'
     hp=12
     agi=2
-    att=2
+    att=1
     deff=0
     mp=0
 
