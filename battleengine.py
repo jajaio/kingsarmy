@@ -85,6 +85,8 @@ def scanner():
         print("You got "+str(gain)+" XP!")
         cl.Player.xp+=int(gain)
         t.sleep(1)
+        print('You now have '+str(gain)+ 'XP!')
+        t.sleep(1)
         save.save_game()
         input('[Game Saved! Press enter to continue.]')
         torch.island()
@@ -109,7 +111,7 @@ def fight():
         elif monster.hp < 1:                                                                                                                                                                         
             print(c.yellow+"You won!")                                                                                                                                                               
             t.sleep(1)                                                                                                                                                                               
-            gain=random.randint(10,25)                                                                                                                                                               
+            gain=random.randint(5,15)                                                                                                                                                               
             print("You got "+str(gain)+" XP!")                                                                                                                                                     
             cl.Player.xp+=int(gain)                                                                                                                                                                
             t.sleep(1)

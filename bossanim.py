@@ -1,9 +1,11 @@
 import time as t
 import colors as c
+
 blarney1='''
 
 
 '''
+
 def blarneyattanim():
     for count in range(2):
         print(c.clear)

@@ -93,6 +93,9 @@ def finish():
     t.sleep(2)
     print("You got an ancient skull!")
     cl.Player.skulls+=1
+    t.sleep(2)
+    print('Your MP stat went up by 1!')
+    cl.Player.mp +=1
     save.save_game()
     t.sleep(2)
     input('[Game Saved! Press enter to continue.]')
