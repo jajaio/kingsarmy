@@ -46,6 +46,7 @@ def neworload():
             cl.Player.lvl=1
             cl.Player.xpreq=20
             cl.Player.skulls=0
+            cl.Player.wname="Dull Blade"
             save.save_game()
             nameask()
         elif qwa=="n":
@@ -101,7 +102,7 @@ def intro():
     print('Shortly after you take off, Dark skulls begin to attack.')
     save.save_game()
     input('[Game Saved! Press enter to continue.]')
-    tutorial
+    tutorial.main()
 
 def dask():
     dragon_question=input(c.yellow+'What would you like to name your dragon?'+c.reset+' >>>'+c.violet).strip().title()

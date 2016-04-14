@@ -15,7 +15,7 @@ def load_game():
         cl.Player.dragon=j['dragon']
         cl.Player.xpreq=j['xpreq']
         cl.Player.skulls=j['skulls']
-
+        cl.Player.wname=j['wname']
 
 if __name__=='__main__':
     load_game()

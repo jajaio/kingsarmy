@@ -15,6 +15,7 @@ class Player(Thing):
     dragon=None
     xpreq=0
     skulls=0
+    wname=None
 
 class Foe(Thing):
     mname="Test mob name"
@@ -97,7 +98,7 @@ class DeathSkull(Foe):
     deff=1
 
 class King(Foe):
-    mname='King of the Skulls'
+    mname='Grimnove'
     hp=60
     #learn more about the character before cont.
 
@@ -121,6 +122,7 @@ def show_player():
     Magic: {p.mp}
     Dragon: {p.dragon}
     Ancient Skulls: {p.skulls}
+    Weapon: {p.wname}
     XP: {p.xp}
     '''
     print(yext.format(p=Player()))

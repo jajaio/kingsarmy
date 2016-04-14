@@ -15,7 +15,8 @@ def save_game():
             "lvl":cl.Player.lvl,
             "dragon":cl.Player.dragon,
             "xpreq":cl.Player.xpreq,
-            "skulls":cl.Player.skulls
+            "skulls":cl.Player.skulls,
+            "wname":cl.Player.wname
             }))
         
 if __name__=='__main__':

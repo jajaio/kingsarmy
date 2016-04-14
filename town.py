@@ -40,7 +40,7 @@ def inn():
 def hub():
     load.load_game()
     print(c.clear)
-    print(c.yellow+"You arive on the King's Great Dragon, KillFang.")
+    print(c.yellow+"You arrive on the King's Great Dragon, KillFang.")
     hubquestion=input("Would you like to go back to your tent? The shrine? Or into the open skies? (1), (2), (3)"+c.reset+" >>>"+c.violet)
     if hubquestion=="1":
         print(c.yellow+"You decide to go back to your tent.")
