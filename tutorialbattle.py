@@ -5,7 +5,8 @@ import time as t
 import anim
 import save
 import load
-town.hub()
+import town
+
 author="jajaio"
 
 
@@ -88,7 +89,6 @@ def scanner():
         save.save_game()
         input('[Game Saved! Press enter to continue.]')
         town.hub()
-
 def fight():
     global q, player, monster
     load.load_game()
