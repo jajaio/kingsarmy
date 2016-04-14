@@ -5,7 +5,7 @@ import time as t
 import anim
 import save
 import load
-import torch
+town.hub()
 author="jajaio"
 
 
@@ -73,11 +73,11 @@ def scanner():
         t.sleep(1)
         ter=input("Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()
         if ter == '1':
-            torch.island()
+            exit()
         elif ter == '2':
             exit()
         else:
-            torch.island()
+            exit()
     elif monster.hp < 1:
         print(c.yellow+"You won!")
         t.sleep(1)
@@ -85,17 +85,15 @@ def scanner():
         print("You got "+str(gain)+" XP!")
         cl.Player.xp+=int(gain)
         t.sleep(1)
-        print('You now have '+str(gain)+ 'XP!')
-        t.sleep(1)
         save.save_game()
         input('[Game Saved! Press enter to continue.]')
-        torch.island()
+        town.hub()
 
 def fight():
     global q, player, monster
     load.load_game()
     player=cl.Player()
-    monster=cl.Foe()
+    monster=cl.TutorialDarkSkull()
     while True:
         if player.hp < 1:                                                                                                                                                                            
             print(c.yellow+"You Died!")                                                                                                                                                                       
@@ -114,8 +112,6 @@ def fight():
             gain=random.randint(5,15)                                                                                                                                                               
             print("You got "+str(gain)+" XP!")                                                                                                                                                     
             cl.Player.xp+=int(gain)                                                                                                                                                                
-            t.sleep(1)
-            print("You now have "+str(cl.Player.xp)+" XP!")
             t.sleep(1)
             save.save_game()                                                                                                                                                                         
             input('[Game Saved! Press enter to continue.]')                                                                                                                                          

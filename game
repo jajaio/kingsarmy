@@ -71,9 +71,33 @@ def neworload():
 
 def intro():
     print(c.clear)
-    print('Some story plot here!')
-    t.sleep(1)
+    print('When the world was the created, 4 gods ruled.')
+    t.sleep(2)
+    print('Amerus, the god of light created the human race.')
+    t.sleep(2)
+    print('Grimnove, the god of dark created greed, and hate.')
+    t.sleep(2)
+    print('Adari, the god of flame created heat, and power.')
+    t.sleep(2)
+    print('Draco, the god of beasts created dragons, and other creatures.')
+    t.sleep(2)
+    print('Amerus adored his humans, more than anything else.')
+    t.sleep(2)
+    print('Grimnove despised Amerus, so he placed a curse on the humans.')
+    t.sleep(2)
+    print('For every 100 humans who die, one become his slave.')
+    t.sleep(2)
+    print('He began to raise an army, full of cloaked skeletons named the Dark Skulls.')
+    t.sleep(2)
+    print('Thousands of years pass...')
+    t.sleep(2)
+    print("King Abner, one of Amerus's decendants decided to take war upon the Grimnove and his Dark Skulls.")
+    t.sleep(2)
+    print("The king has placed about a thousand soldiers on his royal dragon, Killfang.")
+    t.sleep(2)
+    print('And '+cl.Player.name+' is the newest soldier.')
     save.save_game()
+    input('[Game Saved! Press enter to continue.]')
     town.hub()
 
 def dask():
@@ -94,16 +118,21 @@ def dask():
 
 def nameask():
     name_question=input(c.yellow+"What is your name? "+c.reset+ ">>>"+c.violet).strip().title()
-    confirm=input(c.yellow+"Oh, so your name is "+c.blue+name_question+c.yellow+"?"+c.reset+"(Y/N) >>>"+c.violet).strip().lower()
-    if confirm=="y":
-        cl.Player.name=name_question
-        dask()
-    elif confirm=="n":
+    if name_question=='Fire123':
+        print('Sorry, but no noobs allowed.')
+        t.sleep(2)
         nameask()
     else:
-        print("I don't understand... type Y for yes and N for no.")
-        t.sleep(1.5)
-        nameask()
+        confirm=input(c.yellow+"Oh, so your name is "+c.blue+name_question+c.yellow+"?"+c.reset+"(Y/N) >>>"+c.violet).strip().lower()
+        if confirm=="y":
+            cl.Player.name=name_question
+            dask()
+        elif confirm=="n":
+            nameask()
+        else:
+            print("I don't understand... type Y for yes and N for no.")
+            t.sleep(1.5)
+            nameask()
 
 if __name__=='__main__':
     run()

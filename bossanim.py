@@ -2,18 +2,43 @@ import time as t
 import colors as c
 
 blarney1='''
-
+             ,      ,   
+            /(.-""-.)\\
+        |\  \/      \/  /|
+        | \ / =.  .= \ / |
+        \( \   o\/o   / )/
+         \_, '-/  \-' ,_/
+           /   \__/   \\
+           \,___/\___,/
+         ___\ \|--|/ /___
+       /`    \      /    `\\
+      /       '----'       \\
 
 '''
+
+blarney2='''
+             ,      ,   
+            /(.-""-.)\\
+        |\  \/      \/  /|
+        | \ / =.  .= \ / |
+        \( \   o\/o   / )/
+         \_, '-/  \-' ,_/
+           /   \__/   \\
+           \,___/\___,/
+         ___\ \|uu|/ /___
+       /`    \ .--. /    `\\
+      /       '----'       \\
+'''
+
 kingskull='''
                                             .""--.._
                                            []      `'--.._
                                            ||__           `'-,
-                                         `)||_ ```'--..       \
+                                         `)||_ ```'--..       \\
                      _                    /|//}        ``--._  |
                   .'` `'.                /////}              `\/
                  /  .""".\              //{///    
-                /  /_  _`\\            // `||
+                /  /_  _`\\\           // `||
                 | |(_)(_)||          _//   ||
                 | |  /\  )|        _///\   ||
                 | |L====J |       / |/ |   ||
@@ -59,13 +84,13 @@ def kingattanim():
 def blarneyattanim():
     for count in range(2):
         print(c.clear)
-        print(c.red+foeatt1)
-        t.sleep(.25)
+        print(c.red+blarney1)
+        t.sleep(.5)
         print(c.clear)
-        print(foeatt2)
-        t.sleep(.25)
+        print(blarney2)
+        t.sleep(.5)
         print(c.clear)
         
         
 if __name__=='__main__':
-    kingattanim()
+    blarneyattanim()

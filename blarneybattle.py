@@ -6,6 +6,8 @@ import anim
 import save
 import load
 import torch
+import bossanim
+
 author="jajaio"
 
 
@@ -17,7 +19,7 @@ def foeattack():
     global player, monster
     print(c.yellow+"Your foe strikes you!")
     t.sleep(1)
-    anim.foeattanim()
+    bossanim.blarneyattanim()
     player.hp -= monster.att
     player.hp += player.deff
 
@@ -26,13 +28,13 @@ def foeheal():
     if monster.mp<1:
         print(c.yellow+"Your foe tried to heal, but attacked instead!")
         t.sleep(1)
-        anim.foeattanim()
+        bossanim.blarneyattanim()
         player.hp -= monster.att
         player.hp += player.deff
     else:
         print(c.yellow+"Your foe Heals.")
         t.sleep(1)
-        anim.foempanim()
+        bossanim.blarneyattanim()
         monster.hp+=30
         monster.mp-=1
 
@@ -108,11 +110,11 @@ def fight():
     monster=cl.Blarney()
     while True:
         if player.hp < 1:                                                                                                                                                                            
-            print("You Died!")                                                                                                                                                                       
+            print(c.yellow+"You Died!")                                                                                                                                                                       
             t.sleep(1)                                                                                                                                                                               
-            ter=input("Do you want to keep playing, or quit? (1), (2)").strip()                                                                                                                              
+            ter=input("Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()                                                                                          
             if ter == '1':                                                                                                                                                                           
-                break                                                                                                                                                                                
+                torch.island()                                                                                                                                                                                
             elif ter == '2':                                                                                                                                                                         
                 exit()                                                                                                                                                                               
             else:                                                                                                                                                                                    
@@ -122,7 +124,7 @@ def fight():
             t.sleep(1)                                                                                                                                                                               
             gain=random.randint(10,25)                                                                                                                                                               
             print("You got "+str(gain)+" XP!")                                                                                                                                                     
-            cl.Player.gold+=int(gain)                                                                                                                                                                
+            cl.Player.xp+=int(gain)                                                                                                                                                                
             t.sleep(1)                                                                                                                                                                               
             save.save_game()                                                                                                                                                                         
             input('[Game Saved! Press enter to continue.]')                                                                                                                                          
