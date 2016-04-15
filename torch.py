@@ -6,6 +6,7 @@ import time as t
 import sky
 import anim
 import blarneybattle
+import save
 
 author="jajaio"
 
@@ -14,11 +15,53 @@ def random_monster():
     monster=random.choice(monsters)
     cl.Foe=monster
 
+def explore():
+        print(c.yellow+"You decide to explore the island for a bit.")
+        t.sleep(1)
+        print(c.reset+".")
+        t.sleep(.5)
+        print(c.clear)
+        print("..")
+        t.sleep(.5)
+        print(c.clear)
+        print("...")
+        t.sleep(.5)
+        print(c.clear)
+        if cl.Player.wname=='Dull Blade':
+            print('You find a sword, sitting atop a stone at a shrine of Adari.')
+            t.sleep(1)
+            sword=input('Do you want to take the sword? (Y/N)').strip().lower()
+            if sword == 'y':
+                print('As you take the sword, the blade begins to burn with fire.')
+                t.sleep(1)
+                print("You received Adari's Holy Blade, Flameblade!")
+                cl.Player.wname="Flameblade"
+                cl.Player.att+=3
+                cl.show_player()
+                save.save_game()
+                input('[Game saved! Press enter to continue.]')
+                island()
+            elif sword == 'n':
+                print(c.yellow+'You walk back to the main part of the island.')
+                t.sleep(1)
+                input('[Press enter to continue.]')
+                island()
+            else:
+                print(c.yellow+"I don't understand...")
+                t.sleep(1.25)
+                explore()
+        else:
+            print('You arrive at the shrine of Adari.')
+            t.sleep(1)
+            print('Nothing to see here!')
+            input('[Press enter to continue.]')
+            island()
+
 def island():
     print(c.clear)
     print(c.yellow+"You arrive on Torch island.")
     t.sleep(1)
-    f=input(c.yellow+"Do you want to look for monsters? Travel up the volcano? Or fly back to the skies? (1), (2), (3)"+c.reset+" >>>"+c.violet)
+    f=input(c.yellow+"Do you want to look for monsters? Travel up the volcano? Explore the island? Or fly back to the skies? (1), (2), (3), (4)"+c.reset+" >>>"+c.violet)
     if f == "1":
         print(c.yellow+"You decide to look around.")
         t.sleep(1.5)
@@ -52,6 +95,10 @@ def island():
         input('[Press enter to continue]')
         blarneybattle.fight()
     elif f == "3":
+        explore()
+    
+    
+    elif f == "4":
         print(c.yellow+"You fly back into the sky.")
         t.sleep(1)
         anim.dragonanim()
