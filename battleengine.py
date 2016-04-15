@@ -6,6 +6,7 @@ import anim
 import save
 import load
 import town
+import torch
 
 author="jajaio"
 
@@ -89,7 +90,7 @@ def scanner():
         t.sleep(1)
         save.save_game()
         input('[Game Saved! Press enter to continue.]')
-        town.hub()
+        torch.island()
 
 
 def fight():
