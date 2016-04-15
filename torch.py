@@ -18,6 +18,7 @@ def random_monster():
 def explore():
         print(c.yellow+"You decide to explore the island for a bit.")
         t.sleep(1)
+        print(c.clear)
         print(c.reset+".")
         t.sleep(.5)
         print(c.clear)
@@ -28,11 +29,11 @@ def explore():
         t.sleep(.5)
         print(c.clear)
         if cl.Player.wname=='Dull Blade':
-            print('You find a sword, sitting atop a stone at a shrine of Adari.')
+            print(c.yellow+'You find a sword, sitting atop a stone at a shrine of Adari.')
             t.sleep(1)
-            sword=input('Do you want to take the sword? (Y/N)').strip().lower()
+            sword=input('Do you want to take the sword? (Y/N)'+c.reset+" >>>"+c.violet).strip().lower()
             if sword == 'y':
-                print('As you take the sword, the blade begins to burn with fire.')
+                print(c.yellow+'As you take the sword, the blade begins to burn with fire.')
                 t.sleep(1)
                 print("You received Adari's Holy Blade, Flameblade!")
                 cl.Player.wname="Flameblade"
@@ -51,7 +52,7 @@ def explore():
                 t.sleep(1.25)
                 explore()
         else:
-            print('You arrive at the shrine of Adari.')
+            print(c.yellow+'You arrive at the shrine of Adari.')
             t.sleep(1)
             print('Nothing to see here!')
             input('[Press enter to continue.]')
