@@ -4,6 +4,7 @@ import time as t
 import classes as cl
 import anim
 import town
+import skull
 
 author = 'jajaio'
 
@@ -18,9 +19,10 @@ def select():
         anim.dragonanim()
         torch.island()
     elif where == '2':
-        print('Still In development.')
-        t.sleep(2)
-        select()
+        print(c.yellow+'You fly down to Skull Woods.')
+        t.sleep(1)
+        anim.dragonanim()
+        skull.woods()
     elif where == '3':
         print('Still in development.')
         t.sleep(2)

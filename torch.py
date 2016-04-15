@@ -38,8 +38,8 @@ def explore():
                 print("You received Adari's Holy Blade, Flameblade!")
                 cl.Player.wname="Flameblade"
                 cl.Player.att+=3
-                cl.show_player()
                 save.save_game()
+                cl.show_player()
                 input('[Game saved! Press enter to continue.]')
                 island()
             elif sword == 'n':
@@ -97,8 +97,6 @@ def island():
         blarneybattle.fight()
     elif f == "3":
         explore()
-    
-    
     elif f == "4":
         print(c.yellow+"You fly back into the sky.")
         t.sleep(1)

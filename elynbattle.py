@@ -5,8 +5,8 @@ import time as t
 import anim
 import save
 import load
-import town
-import skull
+import torch
+import bossanim
 
 author="jajaio"
 
@@ -19,7 +19,7 @@ def foeattack():
     global player, monster
     print(c.yellow+"Your foe strikes you!")
     t.sleep(1)
-    anim.foeattanim()
+    bossanim.elynanim()
     player.hp -= monster.att
     player.hp += player.deff
 
@@ -28,13 +28,13 @@ def foeheal():
     if monster.mp<1:
         print(c.yellow+"Your foe tried to heal, but attacked instead!")
         t.sleep(1)
-        anim.foeattanim()
+        bossanim.elynanim()
         player.hp -= monster.att
         player.hp += player.deff
     else:
         print(c.yellow+"Your foe Heals.")
         t.sleep(1)
-        anim.foempanim()
+        bossanim.elynanim()
         monster.hp+=30
         monster.mp-=1
 
@@ -69,56 +69,58 @@ def pmove():
         player.hp+=30
         player.mp-=1
 
-
 def scanner():
     if player.hp < 1:
-        print(c.yellow+ "You Died!")
+        print("You Died!")
         t.sleep(1)
-        ter=input("Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()
+        ter=input(c.yellow+"Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()
         if ter == '1':
-            torch.island()
+            skull.woods()
         elif ter == '2':
             exit()
         else:
-            torch.island()
+            skull.woods()
     elif monster.hp < 1:
-        print(c.yellow+"You won!")
-        t.sleep(1)
-        gain=random.randint(20, 35)
-        print("You got "+str(gain)+" XP!")
-        cl.Player.xp+=int(gain)
-        t.sleep(1)
-        save.save_game()
-        input('[Game Saved! Press enter to continue.]')
-        skull.woods()
+        finish()
+
+def finish():        
+    print(c.yellow+"You won!")
+    t.sleep(1)
+    print("You got 125 XP!")
+    cl.Player.xp+=75
+    t.sleep(1)
+    print("You pry the skull of Elyn's head.")
+    t.sleep(2)
+    print("Dark energy flies everywhere.")
+    t.sleep(2)
+    print("You got an ancient skull!")
+    cl.Player.skulls+=1
+    t.sleep(2)
+    print('Your Magic Power and Defence stat went up by 1!')
+    cl.Player.mp +=1
+    save.save_game()
+    t.sleep(2)
+    input('[Game Saved! Press enter to continue.]')
+    skull.woods()
 
 def fight():
     global q, player, monster
     load.load_game()
     player=cl.Player()
-    monster=cl.Foe()
+    monster=cl.Elyn()
     while True:
         if player.hp < 1:                                                                                                                                                                            
             print(c.yellow+"You Died!")                                                                                                                                                                       
             t.sleep(1)                                                                                                                                                                               
             ter=input("Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()                                                                                          
             if ter == '1':                                                                                                                                                                           
-                break                                                                                                                                                             
+                skull.woods()                                                                                                                                                                               
             elif ter == '2':                                                                                                                                                                         
-                print('[Exiting game...]')
                 exit()                                                                                                                                                                               
             else:                                                                                                                                                                                    
-                break                                                                                                                                                                                
+                skull.woods()                                                                                                                                                                               
         elif monster.hp < 1:                                                                                                                                                                         
-            print(c.yellow+"You won!")                                                                                                                                                               
-            t.sleep(1)                                                                                                                                                                               
-            gain=random.randint(20, 35)                                                                                                                                                               
-            print("You got "+str(gain)+" XP!")                                                                                                                                                     
-            cl.Player.xp+=int(gain)                                                                                                                                                                
-            t.sleep(1)
-            save.save_game()                                                                                                                                                                         
-            input('[Game Saved! Press enter to continue.]')                                                                                                                                          
-            break     
+            finish()
         else:
             print(c.clear)
             print(c.blue+player.name+str(" HP = ")+str(player.hp)+str(": ")+player.name+str(" MP = ")+str(player.mp))
@@ -134,5 +136,5 @@ def fight():
                 pmove()
 
 if __name__=='__main__':
-    cl.Foe=cl.Slime
+    cl.Foe=cl.Blarney
     fight()
