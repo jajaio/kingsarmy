@@ -67,6 +67,12 @@ def pmove():
         anim.playermpanim()
         player.hp+=30
         player.mp-=1
+    elif q=="":
+        print(c.yellow+'You attack!')
+        t.sleep(1.25)
+        anim.playerattanim()
+        monster.hp-=player.att
+        monster.hp+=monster.deff
 
 def scanner():
     if player.hp < 1:
