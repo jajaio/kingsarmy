@@ -58,47 +58,60 @@ class Blarney(Foe):
 #Skull Woods
 
 class DarkSkull(Foe):
+    mname='Dark Skull'
     hp=25
     agi=5
     att=7
     deff=1
+    mp=0
 
 class SkullKid(Foe):
+    mname='Skull Kid'
     hp=15
     agi=5
     att=5
+    deff=0
+    mp=0
 
 class Skeleton(Foe):
+    mname='Skeleton'
     hp=20
     agi=8
     att=5
     deff=2
+    mp=0
 
 class Elyn(Foe):
+    mname='Elyn'
     hp=25
     agi=18
     att=6
-    mp=1
+    deff=0
+    mp=2
+
 #Ancient Dunes
 
 class DarkBat(Foe):
+    mname='Dark Bat'
     hp=20
     agi=30
     att=10
 
 class DarkScorpion(Foe):
+    mname='Dark Scorpion'
     hp=30
     agi=15
     att=8
     deff=1
 
 class DeathSkull(Foe):
+    mname='Death Skull'
     hp=50
     agi=0
     att=12
     deff=1
 
-class King(Foe):
+class Grimnove(Foe):
     mname='Grimnove'
     hp=60
     #learn more about the character before cont.
