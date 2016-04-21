@@ -134,5 +134,5 @@ def fight():
                 pmove()
 
 if __name__=='__main__':
-    cl.Foe=cl.Slime
+    cl.Foe=cl.DarkSkull
     fight()

@@ -19,10 +19,16 @@ def select():
         anim.dragonanim()
         torch.island()
     elif where == '2':
-        print(c.yellow+'You fly down to Skull Woods.')
-        t.sleep(1)
-        anim.dragonanim()
-        skull.woods()
+        if cl.Player.wname == 'Dull Blade':
+            print(c.yellow+'Your weapon is too weak! Go find a new one before you come here.')
+            t.sleep(1)
+            input('[Press enter to continue]')
+            select()
+        else:
+            print(c.yellow+'You fly down to Skull Woods.')
+            t.sleep(1)
+            anim.dragonanim()
+            skull.woods()
     elif where == '3':
         print('Still in development.')
         t.sleep(2)

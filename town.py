@@ -10,7 +10,7 @@ author='jajaio'
 
 def inn():
     print(c.clear)
-    innq=input(c.yellow+"You walk into your tent. Would you like to rest here? Or leave? (1), (2)"+c.reset+">>>"+c.violet).strip()
+    innq=input(c.yellow+"You walk into your tent. Would you like to rest here? Or leave? (1), (2)"+c.reset+" >>>"+c.violet).strip()
     if innq=="1":
         print(c.yellow+"You shut your eyes and rest for a bit.")
         t.sleep(.5)

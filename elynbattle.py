@@ -35,7 +35,7 @@ def foeheal():
         print(c.yellow+"Your foe Heals.")
         t.sleep(1)
         bossanim.elynanim()
-        monster.hp+=30
+        monster.hp+=15
         monster.mp-=1
 
 def ai():
@@ -98,6 +98,7 @@ def finish():
     t.sleep(2)
     print('Your Magic Power and Defence stat went up by 1!')
     cl.Player.mp +=1
+    cl.Player.deff +=1
     save.save_game()
     t.sleep(2)
     input('[Game Saved! Press enter to continue.]')

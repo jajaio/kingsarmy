@@ -1,4 +1,5 @@
 import colors as c
+
 author="jajaio"
 
 class Thing():

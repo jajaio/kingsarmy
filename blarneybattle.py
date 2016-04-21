@@ -96,8 +96,9 @@ def finish():
     print("You got an ancient skull!")
     cl.Player.skulls+=1
     t.sleep(2)
-    print('Your MP stat went up by 1!')
+    print('Your Magic and Defence stat went up by 1!')
     cl.Player.mp +=1
+    cl.Player.deff +=1
     save.save_game()
     t.sleep(2)
     input('[Game Saved! Press enter to continue.]')
@@ -120,15 +121,7 @@ def fight():
             else:                                                                                                                                                                                    
                 break                                                                                                                                                                                
         elif monster.hp < 1:                                                                                                                                                                         
-            print(c.yellow+"You won!")                                                                                                                                                               
-            t.sleep(1)                                                                                                                                                                               
-            gain=random.randint(10,25)                                                                                                                                                               
-            print("You got "+str(gain)+" XP!")                                                                                                                                                     
-            cl.Player.xp+=int(gain)                                                                                                                                                                
-            t.sleep(1)                                                                                                                                                                               
-            save.save_game()                                                                                                                                                                         
-            input('[Game Saved! Press enter to continue.]')                                                                                                                                          
-            break     
+            finish()
         else:
             print(c.clear)
             print(c.blue+player.name+str(" HP = ")+str(player.hp)+str(": ")+player.name+str(" MP = ")+str(player.mp))

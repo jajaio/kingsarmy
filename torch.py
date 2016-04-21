@@ -7,6 +7,7 @@ import sky
 import anim
 import blarneybattle
 import save
+import dotdotdot as d
 
 author="jajaio"
 
@@ -66,17 +67,7 @@ def island():
     if f == "1":
         print(c.yellow+"You decide to look around.")
         t.sleep(1.5)
-        print(c.reset)
-        print(c.clear)
-        print(".")
-        t.sleep(.5)
-        print(c.clear)
-        print("..")
-        t.sleep(.5)
-        print(c.clear)
-        print("...")
-        t.sleep(.5)
-        print(c.clear)
+        d.normal()
         random_monster()
         print(c.yellow+"You found a "+c.red+cl.Foe.mname+c.yellow+"!")
         t.sleep(1)
@@ -86,7 +77,8 @@ def island():
         print(c.clear)
         print(c.yellow+'You hike up the great volcano.')
         t.sleep(1)
-        print('You are at the peak of the volcano. You begin to hear scratching and clawing against the inside.')
+        d.normal()
+        print(c.yellow+'You are at the peak of the volcano. You begin to hear scratching and clawing against the inside.')
         t.sleep(2)
         print('A large goblin crawls out, with a skull mask on.')
         t.sleep(2)
