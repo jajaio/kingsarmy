@@ -5,7 +5,7 @@ import classes as cl
 import anim
 import town
 import skull
-
+import ancient
 author = 'jajaio'
 
 def select():
@@ -30,9 +30,16 @@ def select():
             anim.dragonanim()
             skull.woods()
     elif where == '3':
-        print('Still in development.')
-        t.sleep(2)
-        select()
+        if cl.Player.wname == 'Dull Blade':
+            print(c.yellow+'Your weapon is too weak! Go find a new one before you come here.')
+            t.sleep(1)
+            input('[Press enter to continue.]')
+            select()
+        else:
+            print(c.yellow+'You fly down to the Ancient Dunes.')
+            t.sleep(1)
+            anim.dragonanim()
+            ancient.dunes() 
     elif where == '4':
         print(c.yellow+'You fly back to KillFang.')
         t.sleep(1)
