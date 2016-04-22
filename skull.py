@@ -22,9 +22,18 @@ def fortress():
     prompt=input('Do you want to enter? (Y/N)'+c.reset+' >>>'+c.violet).strip().lower()
     if prompt == 'y':
         if cl.Player.skulls = 3:
-            print('The power of the 3 ancient skulls break down magic barrier.')
+            print(c.yellow+'The power of the 3 ancient skulls break down the dark magic beam.')
+        else:
+            print(c.yellow+'You try to open the door, but a beam of dark magic blocks your way.')
+            t.sleep(1)
+            print("You head back into the woods.")
+            t.sleep(1)
+            input('[Press enter to continue.]')
+            woods()
     elif prompt == 'n':
-        pass
+        print(c.yellow+"Head head back to the woods.")
+        d.normal()
+        woods()
     else:
         print("I don't know what you mean...")
         t.sleep(1.25)

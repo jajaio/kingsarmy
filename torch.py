@@ -18,17 +18,7 @@ def random_monster():
 
 def explore():
         print(c.yellow+"You decide to explore the island for a bit.")
-        t.sleep(1)
-        print(c.clear)
-        print(c.reset+".")
-        t.sleep(.5)
-        print(c.clear)
-        print("..")
-        t.sleep(.5)
-        print(c.clear)
-        print("...")
-        t.sleep(.5)
-        print(c.clear)
+        d.normal()
         if cl.Player.wname=='Dull Blade':
             print(c.yellow+'You find a sword, sitting atop a stone at a shrine of Adari.')
             t.sleep(1)
