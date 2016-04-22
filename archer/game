@@ -1,0 +1,144 @@
+#!/usr/bin/env python3
+import time as t
+import colors as c
+import classes as cl
+import town
+import load
+import save
+import os
+import tutorial
+
+logo='''
+  ___  ____ _______  ____  _____   ______  _   ______   
+ |_  ||_  _||_   _| |_   \|_   _|.' ___  || |.' ____ \  
+   | |_/ /    | |    |   \ | | / .'   \_| \_|| (___\_| 
+   |  __'.    | |    | |\ \| | | |   ____    _.____`.  
+ _| |  \ \_  _| |_  _| |_\   |_\ `.___]  |  | \____) | 
+|____||____||_____||_____|\____|`._____.'    \______.' 
+      _       _______     ____    ____  ____  ____     
+     / \     |_   __ \   |_   \  /   _||_  _||_  _|    
+    / _ \      | |__) |    |   \/   |    \ \  / /      
+   / ___ \     |  __ /     | |\  /| |     \ \/ /       
+ _/ /   \ \_  _| |  \ \_  _| |_\/_| |_    _|  |_       
+|____| |____||____| |___||_____||_____|  |______|                                                                           
+                            
+                            (ARCHER EDITION)
+'''
+
+def run():
+    print(c.clear)
+    print(c.red+logo)
+    t.sleep(1)
+    print()
+    print()
+    neworload()
+
+def neworload():
+    qws=input(c.yellow+"Do you want to start a new game? Or load a save file?"+c.reset+" (1), (2) >>>"+c.violet).strip()
+    if qws=="1":
+        qwa=input(c.yellow+"Are you sure? Any old save file will be deleted."+c.reset+" (Y/N) >>>"+c.violet).strip().lower()
+        if qwa=="y":
+            os.system('rm player.json')
+            os.system('touch player.json')
+            cl.Player.hp=10
+            cl.Player.agi=1
+            cl.Player.att=2
+            cl.Player.deff=0
+            cl.Player.mp=0
+            cl.Player.lvl=1
+            cl.Player.xpreq=20
+            cl.Player.skulls=0
+            cl.Player.wname="Dull Blade"
+            save.save_game()
+            nameask()
+        elif qwa=="n":
+            neworload()
+        else:
+            neworload()
+    elif qws=="2":
+        print(c.yellow+"Okay! Here's your stats.")
+        load.load_game()
+        cl.show_player()
+        qwz=input(c.yellow+"Are you sure you want to load this?"+c.reset+" (Y/N) >>>"+c.violet).strip().lower()
+        if qwz=="y":
+            town.hub()
+        elif qwz=="n":
+            neworload()
+        else:
+            print(c.yellow+"I don't understand... type Y for yes and N for no.")
+            t.sleep(1.5)
+            neworload()
+    else:
+        print(c.yellow+"I don't understand... type 1 for a save file, and 2 for loading a game.")
+        t.sleep(1.5)
+        neworload()
+
+def intro():
+    print(c.clear)
+    print('When the world was the created, 4 gods ruled.')
+    t.sleep(2)
+    print('Amerus, the god of light created the human race.')
+    t.sleep(2)
+    print('Grimnove, the god of dark created greed, and hate.')
+    t.sleep(2)
+    print('Adari, the god of flame created heat, and power.')
+    t.sleep(2)
+    print('Draco, the god of beasts created dragons, and other creatures.')
+    t.sleep(2)
+    print('Amerus adored his humans, more than anything else.')
+    t.sleep(2)
+    print('Grimnove despised Amerus, so he placed a curse on the humans.')
+    t.sleep(2)
+    print('For every 100 humans who die, one become his slave.')
+    t.sleep(2)
+    print('He began to raise an army, full of cloaked skeletons named the Dark Skulls.')
+    t.sleep(2)
+    print('Thousands of years pass...')
+    t.sleep(2)
+    print("King Abner, one of Amerus's decendants decided to take war upon the Grimnove and his Dark Skulls.")
+    t.sleep(2)
+    print("The king has placed about a thousand soldiers on his military dragon, Killfang.")
+    t.sleep(2)
+    print('And you are in the most recent squad.')
+    t.sleep(2)
+    print('Shortly after you take off, Dark skulls begin to attack.')
+    save.save_game()
+    input('[Game Saved! Press enter to continue.]')
+    tutorial.main()
+
+def dask():
+    dragon_question=input(c.yellow+'What would you like to name your dragon?'+c.reset+' >>>'+c.violet).strip().title()
+    confrim=input(c.yellow+"So the dragon's name is "+c.blue+dragon_question+c.yellow+"?"+c.reset+"(Y/N) >>>"+c.violet).strip().lower()
+    if confrim=="y":
+        cl.Player.dragon=dragon_question
+        print(c.clear)
+        print(c.yellow+'This game is dedicated to Samuel Mock. Happy birthday, buddy. <3')
+        input('[Press enter to continue]')
+        intro()
+    elif confrim=='n':
+        dask()
+    else:
+        print("I don't understand... type Y for yes and N for no.")
+        t.sleep(1.5)
+        nameask()
+
+def nameask():
+    name_question=input(c.yellow+"What is your name? "+c.reset+ ">>>"+c.violet).strip().title()
+    if name_question=='Fire123':
+        print('Sorry, but no noobs allowed.')
+        t.sleep(2)
+        nameask()
+    else:
+        confirm=input(c.yellow+"Oh, so your name is "+c.blue+name_question+c.yellow+"?"+c.reset+"(Y/N) >>>"+c.violet).strip().lower()
+        if confirm=="y":
+            cl.Player.name=name_question
+            dask()
+        elif confirm=="n":
+            nameask()
+        else:
+            print("I don't understand... type Y for yes and N for no.")
+            t.sleep(1.5)
+            nameask()
+
+if __name__=='__main__':
+    run()
