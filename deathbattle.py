@@ -5,7 +5,7 @@ import time as t
 import anim
 import save
 import load
-import torch
+import ancient
 import bossanim
 
 author="jajaio"
@@ -19,7 +19,7 @@ def foeattack():
     global player, monster
     print(c.yellow+"Your foe strikes you!")
     t.sleep(1)
-    bossanim.elynanim()
+    bossanim.deathskullanim()
     player.hp -= monster.att
     player.hp += player.deff
 
@@ -28,13 +28,13 @@ def foeheal():
     if monster.mp<1:
         print(c.yellow+"Your foe tried to heal, but attacked instead!")
         t.sleep(1)
-        bossanim.elynanim()
+        bossanim.deathskullanim()
         player.hp -= monster.att
         player.hp += player.deff
     else:
         print(c.yellow+"Your foe Heals.")
         t.sleep(1)
-        bossanim.elynanim()
+        bossanim.deathskullanim()
         monster.hp+=15
         monster.mp-=1
 
@@ -75,11 +75,11 @@ def scanner():
         t.sleep(1)
         ter=input(c.yellow+"Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()
         if ter == '1':
-            skull.woods()
+            ancient.dunes()
         elif ter == '2':
             exit()
         else:
-            skull.woods()
+            ancient.dunes()
     elif monster.hp < 1:
         finish()
 
@@ -108,7 +108,7 @@ def fight():
     global q, player, monster
     load.load_game()
     player=cl.Player()
-    monster=cl.Elyn()
+    monster=cl.DeathSkull()
     while True:
         if player.hp < 1:                                                                                                                                                                            
             print(c.yellow+"You Died!")                                                                                                                                                                       

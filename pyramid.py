@@ -5,8 +5,36 @@ import duneengine as b
 import save
 import dotdotdot as d
 import ancient
-
+import deathbattle
 author = 'jajaio'
+
+def outside():
+    print(c.clear)
+    confirm=input(c.yellow+'You find a ladder, leading up to sunlight. Do you wish to climp up? (Y/N)'+c.reset+' >>>'+c.violet).strip().lower()
+    if confirm == 'y':
+        print(c.yellow+'You climb up the ladder.')
+        t.sleep(1)
+        d.normal()
+        print(c.yellow+"You're standing on top of the pyramid")
+        t.sleep(2)
+        print('You look across, and see a large Dark Skull, with two swords and a burning skull.')
+        t.sleep(2)
+        print('As you draw your sword, his flames intensify.')
+        t.sleep(2)
+        print('Full of envy, he pounces toward you.')
+        t.sleep(2)
+        print('And thus begins, the battle of the sons of Adari.')
+        input('[Press enter to continue]')
+        deathbattle.fight()
+    elif confirm == 'n':
+        print('You go back down the hall.')
+        t.sleep(1)
+        d.normal()
+        main()
+    else:
+        print("I don't know what you mean...")
+        t.sleep(1.25)
+        outside()
 
 def shrine():
     print(c.clear)
@@ -49,6 +77,7 @@ def main():
             print(c.yellow+'You take a left.')
             t.sleep(1)
             d.normal()
+            outside()
         elif prompt == '2':
             print(c.yellow+'You take a right.')
             t.sleep(1)
@@ -62,6 +91,10 @@ def main():
         print(c.yellow+'You go back outside.')
         t.sleep(1)
         ancient.dunes()
+    else:
+        print(c.yellow+"I don't know what you mean...")
+        t.sleep(1.25)
+        main()
 
 if __name__=='__main__':
     main()

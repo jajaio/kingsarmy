@@ -21,7 +21,7 @@ def fortress():
     t.sleep(1)
     prompt=input('Do you want to enter? (Y/N)'+c.reset+' >>>'+c.violet).strip().lower()
     if prompt == 'y':
-        if cl.Player.skulls = 3:
+        if cl.Player.skulls == 3:
             print(c.yellow+'The power of the 3 ancient skulls break down the dark magic beam.')
         else:
             print(c.yellow+'You try to open the door, but a beam of dark magic blocks your way.')
@@ -73,6 +73,9 @@ def woods():
         monster=cl.Elyn
         elynbattle.fight()
     elif f == "3":
+        print(c.yellow+"You decide to exlpore the woods.")
+        t.sleep(1)
+        d.normal()
         fortress()
     elif f == "4":
         print(c.yellow+"You fly back into the sky.")
