@@ -66,7 +66,7 @@ def pmove():
         print(c.yellow+"You decide to stay back and heal.")
         t.sleep(1)
         anim.playermpanim()
-        player.hp+=30
+        player.hp+=15
         player.mp-=1
 
 

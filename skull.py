@@ -15,11 +15,26 @@ def random_monster():
     monster=random.choice(monsters)
     cl.Foe=monster
 
+def fortress():
+    print(c.clear)
+    print(c.yellow+'You arrive the fortress of the Dark Skulls.')
+    t.sleep(1)
+    prompt=input('Do you want to enter? (Y/N)'+c.reset+' >>>'+c.violet).strip().lower()
+    if prompt == 'y':
+        if cl.Player.skulls = 3:
+            print('The power of the 3 ancient skulls break down magic barrier.')
+    elif prompt == 'n':
+        pass
+    else:
+        print("I don't know what you mean...")
+        t.sleep(1.25)
+        fortress()
+
 def woods():
     print(c.clear)
     print(c.yellow+"You arrive in the Skull Woods.")
     t.sleep(1)
-    f=input(c.yellow+"Do you want to look for monsters? Enter the cave? Or fly back to the skies? (1), (2), (3)"+c.reset+" >>>"+c.violet)
+    f=input(c.yellow+"Do you want to look for monsters? Enter the cave? Explore the woods? Or fly back to the skies? (1), (2), (3), (4)"+c.reset+" >>>"+c.violet)
     if f == "1":
         print(c.yellow+"You decide to look around.")
         t.sleep(1.5)
@@ -49,13 +64,15 @@ def woods():
         monster=cl.Elyn
         elynbattle.fight()
     elif f == "3":
+        fortress()
+    elif f == "4":
         print(c.yellow+"You fly back into the sky.")
         t.sleep(1)
         anim.dragonanim()
         sky.select()
     else:
         print("I don't know what you mean....")
-        t.sleep(1)
+        t.sleep(1.25)
         woods()
 
 if __name__=='__main__':

@@ -97,6 +97,8 @@ class DarkBat(Foe):
     hp=20
     agi=30
     att=10
+    mp=0
+    deff=0
 
 class DarkScorpion(Foe):
     mname='Dark Scorpion'
@@ -104,13 +106,15 @@ class DarkScorpion(Foe):
     agi=15
     att=8
     deff=1
+    mp=0
 
 class DeathSkull(Foe):
     mname='Death Skull'
     hp=50
     agi=0
     att=12
-    deff=1
+    deff=2
+    mp=0
 
 class Grimnove(Foe):
     mname='Grimnove'

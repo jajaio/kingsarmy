@@ -46,8 +46,13 @@ def main():
     if question == '1':
         prompt=input(c.yellow+'Do you want to go left or right? (1), (2)'+c.reset+' >>>'+c.violet).strip()
         if prompt == '1':
-            pass
+            print(c.yellow+'You take a left.')
+            t.sleep(1)
+            d.normal()
         elif prompt == '2':
+            print(c.yellow+'You take a right.')
+            t.sleep(1)
+            d.normal()
             shrine()
         else:
             print(c.yellow+"I don't understand...")

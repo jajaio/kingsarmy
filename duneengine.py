@@ -35,7 +35,7 @@ def foeheal():
         print(c.yellow+"Your foe Heals.")
         t.sleep(1)
         anim.foempanim()
-        monster.hp+=30
+        monster.hp+=15
         monster.mp-=1
 
 def ai():
@@ -76,11 +76,11 @@ def scanner():
         t.sleep(1)
         ter=input("Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()
         if ter == '1':
-            torch.island()
+            ancient.dunes()
         elif ter == '2':
             exit()
         else:
-            torch.island()
+            ancient.dunes()
     elif monster.hp < 1:
         print(c.yellow+"You won!")
         t.sleep(1)

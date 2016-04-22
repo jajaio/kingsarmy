@@ -28,7 +28,7 @@ def dunes():
         print(c.yellow+"You found a "+c.red+cl.Foe.mname+c.yellow+"!")
         t.sleep(1)
         b.fight()
-        woods()
+        dunes()
     elif f == "2":
         print(c.yellow+'You travel to the pyramid.')
         t.sleep(1)
@@ -42,7 +42,7 @@ def dunes():
     else:
         print("I don't know what you mean....")
         t.sleep(1)
-        woods()
+        dunes()
 
 if __name__=='__main__':
     dunes()

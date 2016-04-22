@@ -81,8 +81,71 @@ elyn2='''
 
 '''
 
+deathskull1='''
+         .            )        )
+                  (  (|              .
+              )   )\/ ( ( (
+      *  (   ((  /     ))\))  (  )    )
+    (     \   )\(          |  ))( )  (|
+    >)     ))/   |          )/  \((  ) \\
+    (     (      .        -.     V )/   )(    (
+     \   /     .   \            .       \))   ))
+       )(      (  | |   )            .    (  /
+      )(    ,'))     \ /          \( `.    )
+      (\>  ,'/__      ))            __`.  /
+     ( \   | /  ___   ( \/     ___   \ | ( (
+      \.)  |/  /   \__      __/   \   \|  ))
+     .  \. |>  \      | __ |      /   <|  /
+          )/    \____/ :..: \____/     \ <
+   )   \ (|__  .      / ;: \          __| )  (
+  ((    )\)  ~--_     --  --      _--~    /  ))
+   \    (    |  ||               ||  |   (  /
+         \.  |  ||_             _||  |  /
+           > :  |  ~V+-I_I_I-+V~  |  : (.
+          (  \:  T\   _     _   /T  : ./
+           \  :    T^T T-+-T T^T    ;<
+            \..`_       -+-       _'  )
+             . `--=.._____..=--'. ./ 
 
-kingskull='''
+
+
+'''
+
+deathskull2='''
+         .            )        )
+                  (  (|              .
+              )   )\/ ( ( (
+      *  (   ((  /     ))\))  (  )    )
+    (     \   )\(          |  ))( )  (|
+    >)     ))/   |          )/  \((  ) \\
+    (     (      .        -.     V )/   )(    (
+     \   /     .   \            .       \))   ))
+       )(      (  | |   )            .    (  /
+      )(    ,'))     \ /          \( `.    )
+      (\>  ,'/__      ))            __`.  /
+     ( \   | /  ___   ( \/     ___   \ | ( (
+      \.)  |/  /   \__      __/   \   \|  ))
+     .  \. |>  \      | __ |      /   <|  /
+          )/    \____/ :..: \____/     \ <
+   )   \ (|__  .      / ;: \          __| )  (
+  ((    )\)  ~--_     --  --      _--~    /  ))
+   \ /   (    |  ||               ||  |   (  /
+         \.  |  ||_             _||  |  / 
+     \    > :  |  ~V+-I_I_I-+V~  |  : (.  )
+       ) (  \:                             )(
+                                         / 
+        \                                  /
+       (        T\   _     _   /T  : ./  )
+           \  :    T^T T-+-T T^T    ;<
+            \..`_       -+-       _'  )
+               . `--=.._____..=--'. ./         
+
+'''
+
+
+
+
+grimnove='''
                                             .""--.._
                                            []      `'--.._
                                            ||__           `'-,
@@ -123,14 +186,14 @@ kingskull='''
 `-.___,-.      .-.        ___,'            ||
          `---'`   `'----'`
 '''
-def kingattanim():
+def grimnoveanim():
     for count in range(2):
         print(c.clear)
-        print(c.red+kingskull)
-        t.sleep(.25)
+        print(c.red+grimnove)
+        t.sleep(.5)
         print(c.clear)
-        print(c.yellow+kingskull)
-        t.sleep(.25)
+        print(c.yellow+grimnove)
+        t.sleep(.5)
         print(c.clear)
 
 def blarneyattanim():
@@ -142,7 +205,17 @@ def blarneyattanim():
         print(blarney2)
         t.sleep(.5)
         print(c.clear)
-        
+    
+def deathskullanim():
+    for count in range(2):
+        print(c.clear)
+        print(c.red+deathskull1)
+        t.sleep(.5)
+        print(c.clear)
+        print(deathskull2)
+        t.sleep(.5)
+        print(c.clear)
+
 def elynanim():
     for count in range(2):
         print(c.clear)
@@ -160,3 +233,10 @@ if __name__=='__main__':
     blarneyattanim()
     print('Elyn')
     elynanim()
+    t.sleep(1)
+    print('Death Skull')
+    deathskullanim()
+    t.sleep(1)
+    print('Grimnove')
+    grimnoveanim()
+    t.sleep(1)

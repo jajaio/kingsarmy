@@ -5,8 +5,8 @@ import time as t
 import anim
 import save
 import load
+import torch
 import bossanim
-import skull
 
 author="jajaio"
 
@@ -86,10 +86,10 @@ def scanner():
 def finish():        
     print(c.yellow+"You won!")
     t.sleep(1)
-    print("You got 125 XP!")
-    cl.Player.xp+=125
+    print("You got 175 XP!")
+    cl.Player.xp+=175
     t.sleep(1)
-    print("You pry the skull of Elyn's head.")
+    print("You pry the skull of Death Skull's head.")
     t.sleep(2)
     print("Dark energy flies everywhere.")
     t.sleep(2)
@@ -102,7 +102,7 @@ def finish():
     save.save_game()
     t.sleep(2)
     input('[Game Saved! Press enter to continue.]')
-    skull.woods()
+    ancient.dunes()
 
 def fight():
     global q, player, monster
@@ -115,11 +115,11 @@ def fight():
             t.sleep(1)                                                                                                                                                                               
             ter=input("Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()                                                                                          
             if ter == '1':                                                                                                                                                                           
-                skull.woods()                                                                                                                                                                               
+                ancient.dunes()                                                                                                                                                                               
             elif ter == '2':                                                                                                                                                                         
                 exit()                                                                                                                                                                               
             else:                                                                                                                                                                                    
-                skull.woods()                                                                                                                                                                               
+                ancient.dunes()                                                                                                                                                                               
         elif monster.hp < 1:                                                                                                                                                                         
             finish()
         else:
@@ -137,5 +137,5 @@ def fight():
                 pmove()
 
 if __name__=='__main__':
-    cl.Foe=cl.Blarney
+    cl.Foe=cl.DeathSkull
     fight()
