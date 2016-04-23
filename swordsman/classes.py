@@ -119,7 +119,10 @@ class DeathSkull(Foe):
 class Grimnove(Foe):
     mname='Grimnove'
     hp=60
-    #learn more about the character before cont.
+    agi=0
+    att=20
+    deff=5
+    mp=1
 
 #Tutorial Dark Skull
 class TutorialDarkSkull(Foe):

@@ -7,6 +7,8 @@ import sky
 import anim
 import dotdotdot as d
 import elynbattle
+import grimnovebattle
+import load
 
 author="jajaio"
 
@@ -23,6 +25,8 @@ def fortress():
     if prompt == 'y':
         if cl.Player.skulls == 3:
             print(c.yellow+'The power of the 3 ancient skulls break down the dark magic beam.')
+            #Setup for fight with story text here
+            grimnovebattle.fight()
         else:
             print(c.yellow+'You try to open the door, but a beam of dark magic blocks your way.')
             t.sleep(1)
@@ -88,4 +92,5 @@ def woods():
         woods()
 
 if __name__=='__main__':
+    load.load_game()
     woods()
