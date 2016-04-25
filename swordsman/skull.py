@@ -36,8 +36,27 @@ def fortress():
             t.sleep(2)
             print('The fortress ground gives out, and you fall down with the debris.')
             t.sleep(2)
-            print('')
-            grimnovebattle.fight()
+            print('You lift yourself up.')
+            t.sleep(2)
+            print('You see another soldier of the army, with a bow and a flaming arrow.')
+            t.sleep(2)
+            print('You look ahead, and see a large Dark Skull approaching you.')
+            t.sleep(2)
+            print("Grimnove, the god of dark is standing in front of you two.")
+            t.sleep(2)
+            print('"Kill that archer, and we can rule the world together. You will be king, and I will be god.')
+            t.sleep(2)
+            des=input("Do you want to side with Grimnove? Or fight him? (1), (2)"+c.reset+" >>>"+c.violet).strip()
+            if des == '1':
+                pass
+            elif des == '2':
+                print(c.yellow+'The archer aims his bow, and you grip your sword.')
+                t.sleep(2)
+                print("And Adari's two chosen heroes begin the final fight against Grimnove.")
+                input('[Press enter to continue]')
+                grimnovebattle.fight()
+            else:
+                
         else:
             print(c.yellow+'You try to open the door, but a beam of dark magic blocks your way.')
             t.sleep(1)
