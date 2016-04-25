@@ -76,11 +76,11 @@ def scanner():
         t.sleep(1)
         ter=input("Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()
         if ter == '1':
-            torch.island()
+            skull.woods()
         elif ter == '2':
             exit()
         else:
-            torch.island()
+            skull.woods()
     elif monster.hp < 1:
         print(c.yellow+"You won!")
         t.sleep(1)
