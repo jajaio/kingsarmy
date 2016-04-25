@@ -17,6 +17,28 @@ def random_monster():
     monster=random.choice(monsters)
     cl.Foe=monster
 
+def final():
+    des=input(c.yellow+"Do you want to side with Grimnove? Or fight him with the archer? (1), (2)"+c.reset+" >>>"+c.violet).strip()
+    if des == '1':
+        print(c.yellow+"You point your blade at the archer.")
+            t.sleep(2)
+            print("He draws his arrow.")
+            t.sleep(2)
+            print("The battle between Amerus's two chosen heroes begin.")
+            t.sleep(2)
+            input('[Press enter to continue.]')
+            #call battle
+        elif des == '2':
+            print(c.yellow+'The archer aims his bow, and you grip your sword.')
+            t.sleep(2)
+            print("And Amerus's two chosen heroes begin the final fight against Grimnove.")
+            input('[Press enter to continue]')
+            grimnovebattle.fight()
+        else:
+            print(c.yellow+"I don't know what you mean...")
+            t.sleep(1.25)
+            final()
+
 def fortress():
     print(c.clear)
     print(c.yellow+'You arrive the fortress of the Dark Skulls.')
@@ -46,17 +68,9 @@ def fortress():
             t.sleep(2)
             print('"Kill that archer, and we can rule the world together. You will be king, and I will be god.')
             t.sleep(2)
-            des=input("Do you want to side with Grimnove? Or fight him? (1), (2)"+c.reset+" >>>"+c.violet).strip()
-            if des == '1':
-                pass
-            elif des == '2':
-                print(c.yellow+'The archer aims his bow, and you grip your sword.')
-                t.sleep(2)
-                print("And Adari's two chosen heroes begin the final fight against Grimnove.")
-                input('[Press enter to continue]')
-                grimnovebattle.fight()
-            else:
-                
+            input('[Press enter to continue.]')
+            final()
+
         else:
             print(c.yellow+'You try to open the door, but a beam of dark magic blocks your way.')
             t.sleep(1)
