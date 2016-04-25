@@ -124,6 +124,14 @@ class Grimnove(Foe):
     deff=5
     mp=1
 
+class Archer(Foe):
+    mname='Eric'
+    hp=25
+    agi=100
+    att=20
+    deff=3
+    mp=3
+
 #Tutorial Dark Skull
 class TutorialDarkSkull(Foe):
     mname='Dark Skull'

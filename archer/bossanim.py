@@ -1,5 +1,40 @@
 import time as t
 import colors as c
+author='jajaio'
+
+jamesatt1='''
+      |
+      |
+\_0___+
+  |
+  |
+ / /
+'''
+jamesatt2='''
+
+
+\_0___+----
+  |
+  |
+ / /
+'''
+jamesmp1='''
+   <3
+
+ \\ 0 /
+  \\|/
+   |
+  | |
+'''
+jamesmp2='''
+   <3
+
+__ 0 __
+  \\|/
+   |
+  | |
+'''
+
 
 blarney1='''
              ,      ,   
@@ -226,17 +261,43 @@ def elynanim():
         t.sleep(.5)
         print(c.clear)
 
+def jamesattanim():
+    for count in range(2):
+        print(c.clear)
+        print(c.red+jamesatt1)
+        t.sleep(.25)
+        print(c.clear)
+        print(jamesatt2)
+        t.sleep(.25)
+        print(c.clear)
+
+def jamesmpanim():
+    for count in range(2):
+        print(c.clear)
+        print(c.red+jamesmp1)
+        t.sleep(.25)
+        print(c.clear)
+        print(jamesmp2)
+        t.sleep(.25)
+        print(c.clear)
 
 if __name__=='__main__':
     print('Blarney')
     t.sleep(1)
     blarneyattanim()
     print('Elyn')
+    t.sleep(1)
     elynanim()
-    t.sleep(1)
     print('Death Skull')
+    t.sleep(1)
     deathskullanim()
-    t.sleep(1)
     print('Grimnove')
-    grimnoveanim()
     t.sleep(1)
+    grimnoveanim()
+    print('James att')
+    t.sleep(1)
+    jamesattanim()
+    print('James mp')
+    t.sleep(1)
+    jamesmpanim()
+

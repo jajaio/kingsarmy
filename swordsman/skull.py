@@ -25,7 +25,18 @@ def fortress():
     if prompt == 'y':
         if cl.Player.skulls == 3:
             print(c.yellow+'The power of the 3 ancient skulls break down the dark magic beam.')
-            #Setup for fight with story text here
+            t.sleep(2)
+            print('You dash into the fortress.')
+            t.sleep(2)
+            print('You look around.')
+            t.sleep(2)
+            print("It's empty.")
+            t.sleep(2)
+            print('You begin to feel the ground shake.')
+            t.sleep(2)
+            print('The fortress ground gives out, and you fall down with the debris.')
+            t.sleep(2)
+            print('')
             grimnovebattle.fight()
         else:
             print(c.yellow+'You try to open the door, but a beam of dark magic blocks your way.')

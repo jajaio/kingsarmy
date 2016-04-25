@@ -1,34 +1,26 @@
 import time as t
 import colors as c
 
-heroatt1='''
-      |
-      |
-\_0___+
-  |
-  |
- / /
-'''
-archer1='''
+heroanim1='''
 \_0___}
   |
   |
  / /
 '''
-archer2='''
+heroanim2='''
 \_0___}  -->
   |
   |
  / /
 '''
 
-archer3='''
+heroanim3='''
 \_0___}    -->
   |
   |
  / /
 '''
-archer4='''
+heroanim4='''
 \_0___}      -->
   |
   |
