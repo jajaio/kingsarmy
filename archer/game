@@ -118,14 +118,14 @@ def dask():
     elif confrim=='n':
         dask()
     else:
-        print("I don't understand... type Y for yes and N for no.")
+        print(c.yellow+"I don't understand... type Y for yes and N for no.")
         t.sleep(1.5)
         nameask()
 
 def nameask():
     name_question=input(c.yellow+"What is your name? "+c.reset+ ">>>"+c.violet).strip().title()
     if name_question=='Fire123':
-        print('Sorry, but no noobs allowed.')
+        print(c.yellow+'Sorry, but no noobs allowed.')
         t.sleep(2)
         nameask()
     else:
@@ -136,7 +136,7 @@ def nameask():
         elif confirm=="n":
             nameask()
         else:
-            print("I don't understand... type Y for yes and N for no.")
+            print(c.yellow+"I don't understand... type Y for yes and N for no.")
             t.sleep(1.5)
             nameask()
 

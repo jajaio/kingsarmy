@@ -124,11 +124,11 @@ class Grimnove(Foe):
     deff=5
     mp=1
 
-class Swordsman(Foe):
-    mname='James'
+class Archer(Foe):
+    mname='Eric'
     hp=25
-    agi=0
-    att=25
+    agi=100
+    att=20
     deff=3
     mp=3
 

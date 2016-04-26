@@ -7,6 +7,9 @@ import sky
 import anim
 import dotdotdot as d
 import elynbattle
+import grimnovebattle
+import load
+import archerbattle
 
 author="jajaio"
 
@@ -14,6 +17,28 @@ def random_monster():
     monsters=[cl.Skeleton, cl.SkullKid, cl.DarkSkull]
     monster=random.choice(monsters)
     cl.Foe=monster
+
+def final():
+    des=input(c.yellow+"Do you want to side with Grimnove? Or fight him with the archer? (1), (2)"+c.reset+" >>>"+c.violet).strip()
+    if des == '1':
+        print(c.yellow+"You point your blade at the archer.")
+        t.sleep(2)
+        print("He draws his arrow.")
+        t.sleep(2)
+        print("The battle between Amerus's two chosen heroes begin.")
+        t.sleep(2)
+        input('[Press enter to continue.]')
+        archerbattle.fight()
+    elif des == '2':
+        print(c.yellow+'The archer aims his bow, and you grip your sword.')
+        t.sleep(2)
+        print("And Amerus's two chosen heroes begin the final fight against Grimnove.")
+        input('[Press enter to continue]')
+        grimnovebattle.fight()
+    else:
+        print(c.yellow+"I don't know what you mean...")
+        t.sleep(1.25)
+        final()
 
 def fortress():
     print(c.clear)
@@ -23,6 +48,30 @@ def fortress():
     if prompt == 'y':
         if cl.Player.skulls == 3:
             print(c.yellow+'The power of the 3 ancient skulls break down the dark magic beam.')
+            t.sleep(2)
+            print('You dash into the fortress.')
+            t.sleep(2)
+            print('You look around.')
+            t.sleep(2)
+            print("It's empty.")
+            t.sleep(2)
+            print('You begin to feel the ground shake.')
+            t.sleep(2)
+            print('The fortress ground gives out, and you fall down with the debris.')
+            t.sleep(2)
+            print('You lift yourself up.')
+            t.sleep(2)
+            print('You see another soldier of the army, with a bow and a flaming arrow.')
+            t.sleep(2)
+            print('You look ahead, and see a large Dark Skull approaching you.')
+            t.sleep(2)
+            print("Grimnove, the god of dark is standing in front of you two.")
+            t.sleep(2)
+            print('"Kill that archer, and we can rule the world together. You will be king, and I will be god."')
+            t.sleep(2)
+            input('[Press enter to continue.]')
+            final()
+
         else:
             print(c.yellow+'You try to open the door, but a beam of dark magic blocks your way.')
             t.sleep(1)
@@ -88,4 +137,5 @@ def woods():
         woods()
 
 if __name__=='__main__':
+    load.load_game()
     woods()

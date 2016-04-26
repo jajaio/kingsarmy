@@ -1,35 +1,27 @@
 import time as t
 import colors as c
 
-heroanim1='''
+archer1='''
 \_0___}
   |
   |
  / /
 '''
-heroanim2='''
+archer2='''
 \_0___}  -->
   |
   |
  / /
 '''
 
-heroanim3='''
+archer3='''
 \_0___}    -->
   |
   |
  / /
 '''
-heroanim4='''
+archer4='''
 \_0___}      -->
-  |
-  |
- / /
-'''
-heroatt2='''
-
-
-\_0___+----
   |
   |
  / /
@@ -130,7 +122,7 @@ def foempanim():
         t.sleep(.25)
         print(c.clear)
 
-def archeranim():
+def playerattanim():
     for count in range(2):
         print(c.clear)
         print(c.blue+archer1)
@@ -143,16 +135,6 @@ def archeranim():
         t.sleep(.25)
         print(c.clear)
         print(archer4)
-        t.sleep(.25)
-        print(c.clear)
-
-def playerattanim():
-    for count in range(2):
-        print(c.clear)
-        print(c.blue+heroatt1)
-        t.sleep(.25)
-        print(c.clear)
-        print(heroatt2)
         t.sleep(.25)
         print(c.clear)
 
@@ -169,9 +151,6 @@ def playermpanim():
 if __name__=='__main__':
     print('You fly away.')
     dragonanim()
-    print("You shoot your bow.")
-    t.sleep(1)
-    archeranim()
     print("The Player attacks!")
     t.sleep(1)
     playerattanim()
