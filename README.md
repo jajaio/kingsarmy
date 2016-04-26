@@ -6,8 +6,7 @@ Experience the game from two perspectives! One from a swordsman, and
 one from an archer. You travel to different places in each version.
 
 # Status
-Not finished. Swordsman edition is almost done, and I've yet to start
-the programming for Archer edition. More updates within the following
-weeks.
+Swordsman edition just launched its beta. Hunting for bugs now.
+Archer is being designed still.
 
-April 22, 2016.
+April 26, 2016

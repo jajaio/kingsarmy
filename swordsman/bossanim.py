@@ -1,5 +1,46 @@
 import time as t
 import colors as c
+archer1='''
+\_0___}
+  |
+  |
+ / /
+'''
+archer2='''
+\_0___}  -->
+  |
+  |
+ / /
+'''
+
+archer3='''
+\_0___}    -->
+  |
+  |
+ / /
+'''
+archer4='''
+\_0___}      -->
+  |
+  |
+ / /
+'''
+archermp1='''
+   <3
+
+ \\ 0 /
+  \\|/
+   |
+  | |
+'''
+archermp2='''
+   <3
+
+__ 0 __
+  \\|/
+   |
+  | |
+'''
 
 blarney1='''
              ,      ,   
@@ -205,7 +246,33 @@ def blarneyattanim():
         print(blarney2)
         t.sleep(.5)
         print(c.clear)
-    
+
+def archerattanim():
+    for count in range(2):
+        print(c.clear)
+        print(c.red+archer1)
+        t.sleep(.25)
+        print(c.clear)
+        print(archer2)
+        t.sleep(.25)
+        print(c.clear)
+        print(archer3)
+        t.sleep(.25)
+        print(c.clear)
+        print(archer4)
+        t.sleep(.25)
+        print(c.clear)
+
+def archermpanim():
+    for count in range(2):
+        print(c.clear)
+        print(c.red+archermp1)
+        t.sleep(.25)
+        print(c.clear)
+        print(archermp2)
+        t.sleep(.25)
+        print(c.clear)
+
 def deathskullanim():
     for count in range(2):
         print(c.clear)
@@ -232,11 +299,18 @@ if __name__=='__main__':
     t.sleep(1)
     blarneyattanim()
     print('Elyn')
+    t.sleep(1)
     elynanim()
-    t.sleep(1)
     print('Death Skull')
+    t.sleep(1)
     deathskullanim()
-    t.sleep(1)
     print('Grimnove')
-    grimnoveanim()
     t.sleep(1)
+    grimnoveanim()
+    print('Archer att')
+    t.sleep(1)
+    archerattanim()
+    print('Archer mp')
+    t.sleep(1)
+    archermpanim()
+

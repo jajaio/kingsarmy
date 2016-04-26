@@ -7,7 +7,6 @@ import save
 import load
 import bossanim
 import skull
-import credits
 
 author="jajaio"
 
@@ -20,7 +19,7 @@ def foeattack():
     global player, monster
     print(c.yellow+"Your foe strikes you!")
     t.sleep(1)
-    bossanim.grimnoveanim()
+    bossanim.archerattanim()
     player.hp -= monster.att
     player.hp += player.deff
 
@@ -29,13 +28,13 @@ def foeheal():
     if monster.mp<1:
         print(c.yellow+"Your foe tried to heal, but attacked instead!")
         t.sleep(1)
-        bossanim.grimnoveanim()
+        bossanim.archerattanim()
         player.hp -= monster.att
         player.hp += player.deff
     else:
         print(c.yellow+"Your foe Heals.")
         t.sleep(1)
-        bossanim.grimnoveanim()
+        bossanim.archermpanim()
         monster.hp+=15
         monster.mp-=1
 
@@ -87,25 +86,26 @@ def scanner():
 def finish():        
     print(c.yellow+'You go in for the final blow.')
     t.sleep(2)
-    print('Flameblade unleashes a large burning flame.')
+    print('You stab the archer right through the chest.')
     t.sleep(2)
-    print("An arrow punctures Grimnove's head")
+    print('His body scorched by the flame.')
     t.sleep(2)
-    print("Light begins to spurt out from Grimnove's broken body")
+    print('You hear a deep laugh from behind you.')
     t.sleep(2)
-    print('Debris is crashing down through the room, but flames cover you two like a shield.')
+    print('You bow, before your new god.')
     t.sleep(2)
-    print('You crawl out from the debris.')
+    print('A Dark Skull comes by, an places a dark cape on your back.')
     t.sleep(2)
-    input('[Press enter to continue.]')
+    print('You are now king of the dark.')
+    t.sleep(2)
+    input('[Press enter to continue]')
     credits.roll()
 
-    
 def fight():
     global q, player, monster
     load.load_game()
     player=cl.Player()
-    monster=cl.Grimnove()
+    monster=cl.Archer()
     while True:
         if player.hp < 1:                                                                                                                                                                            
             print(c.yellow+"You Died!")                                                                                                                                                                       
@@ -135,5 +135,5 @@ def fight():
 
 if __name__=='__main__':
     load.load_game()
-    cl.Foe=cl.Grimnove
+    cl.Foe=cl.Archer
     fight()

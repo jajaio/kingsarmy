@@ -9,6 +9,7 @@ import dotdotdot as d
 import elynbattle
 import grimnovebattle
 import load
+import archerbattle
 
 author="jajaio"
 
@@ -21,23 +22,23 @@ def final():
     des=input(c.yellow+"Do you want to side with Grimnove? Or fight him with the archer? (1), (2)"+c.reset+" >>>"+c.violet).strip()
     if des == '1':
         print(c.yellow+"You point your blade at the archer.")
-            t.sleep(2)
-            print("He draws his arrow.")
-            t.sleep(2)
-            print("The battle between Amerus's two chosen heroes begin.")
-            t.sleep(2)
-            input('[Press enter to continue.]')
-            #call battle
-        elif des == '2':
-            print(c.yellow+'The archer aims his bow, and you grip your sword.')
-            t.sleep(2)
-            print("And Amerus's two chosen heroes begin the final fight against Grimnove.")
-            input('[Press enter to continue]')
-            grimnovebattle.fight()
-        else:
-            print(c.yellow+"I don't know what you mean...")
-            t.sleep(1.25)
-            final()
+        t.sleep(2)
+        print("He draws his arrow.")
+        t.sleep(2)
+        print("The battle between Amerus's two chosen heroes begin.")
+        t.sleep(2)
+        input('[Press enter to continue.]')
+        archerbattle.fight()
+    elif des == '2':
+        print(c.yellow+'The archer aims his bow, and you grip your sword.')
+        t.sleep(2)
+        print("And Amerus's two chosen heroes begin the final fight against Grimnove.")
+        input('[Press enter to continue]')
+        grimnovebattle.fight()
+    else:
+        print(c.yellow+"I don't know what you mean...")
+        t.sleep(1.25)
+        final()
 
 def fortress():
     print(c.clear)

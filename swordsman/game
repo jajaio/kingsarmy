@@ -22,7 +22,8 @@ logo='''
  _/ /   \ \_  _| |  \ \_  _| |_\/_| |_    _|  |_       
 |____| |____||____| |___||_____||_____|  |______|                                                                           
                             
-                            (SWORDSMAN EDITION)
+                           (SWORDSMAN EDITION)
+                             (Beta Ver: 1.0)
 '''
 
 def run():
