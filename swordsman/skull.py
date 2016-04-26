@@ -67,7 +67,7 @@ def fortress():
             t.sleep(2)
             print("Grimnove, the god of dark is standing in front of you two.")
             t.sleep(2)
-            print('"Kill that archer, and we can rule the world together. You will be king, and I will be god.')
+            print('"Kill that archer, and we can rule the world together. You will be king, and I will be god."')
             t.sleep(2)
             input('[Press enter to continue.]')
             final()
