@@ -17,25 +17,24 @@ class Player(Thing):
     xpreq=0
     skulls=0
     wname=None
-    sa=0 #Super Attack
 
 class Foe(Thing):
     mname="Test mob name"
 
-#Torch Island
+#Snow Mountains
 
-class Bandit(Foe):
-    mname='Bandit'
-    hp=7
-    agi=3
+class Troll(Foe):
+    mname='Troll'
+    hp=10
+    agi=0
     deff=0
     att=2
     mp=0
     
-class Slime(Foe):
-    mname='Slime'
+class Bat(Foe):
+    mname='Bat'
     hp=5
-    agi=0
+    agi=10
     deff=0
     att=1
     mp=0
@@ -48,8 +47,8 @@ class Goblin(Foe):
     deff=0
     mp=0
 
-class Blarney(Foe):
-    mname='Blarney'
+class Yimur(Foe): #Large Yeti
+    mname='Yimur'
     hp=20
     agi=0
     att=5

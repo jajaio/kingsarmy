@@ -17,7 +17,6 @@ class Player(Thing):
     xpreq=0
     skulls=0
     wname=None
-    sa=0 #Super Attack
 
 class Foe(Thing):
     mname="Test mob name"

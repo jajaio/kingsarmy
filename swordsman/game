@@ -23,7 +23,7 @@ logo='''
 |____| |____||____| |___||_____||_____|  |______|                                                                           
                             
                            (SWORDSMAN EDITION)
-                             (Beta Ver: 1.1)
+                             (Beta Ver: 1.1.1)
 '''
 
 def run():
@@ -96,13 +96,13 @@ def intro():
     t.sleep(2)
     print('Thousands of years pass...')
     t.sleep(2)
-    print("King Abner, one of Amerus's decendants decided to take war upon the Grimnove and his Dark Skulls.")
+    print("King Abner, one of Amerus's decendants decided to take war upon Grimnove and his Dark Skulls.")
     t.sleep(2)
     print("The king has placed about a thousand soldiers on his military dragon, Killfang.")
     t.sleep(2)
     print('And you are in the most recent squad.')
     t.sleep(2)
-    print('Shortly after you take off, Dark skulls begin to attack.')
+    print('Shortly after you take off, Dark Skulls begin to attack.')
     save.save_game()
     input('[Game Saved! Press enter to continue.]')
     tutorial.main()
