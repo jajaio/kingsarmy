@@ -1,5 +1,6 @@
 import time as t
 import colors as c
+import town
 author='jajaio'
 
 def roll():
@@ -13,5 +14,6 @@ def roll():
     print("Special thanks to: Rob Muhlestein")
     t.sleep(2)
     input('[Game Saved! Press enter to continue]')
+    town.hub()
 if __name__ == '__main__':
     roll()

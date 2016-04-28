@@ -7,7 +7,6 @@ import save
 import load
 import bossanim
 import skull
-import credits
 
 author="jajaio"
 
