@@ -96,7 +96,7 @@ def finish():
     print("You got an ancient skull!")
     cl.Player.skulls+=1
     t.sleep(2)
-    print('Your Magic and Defence stat went up by 1!')
+    print('Your Magic and Defense stat went up by 1!')
     cl.Player.mp +=1
     cl.Player.deff +=1
     save.save_game()

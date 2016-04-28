@@ -23,7 +23,7 @@ logo='''
 |____| |____||____| |___||_____||_____|  |______|                                                                           
                             
                            (SWORDSMAN EDITION)
-                             (Beta Ver: 1.2)
+                             (Beta Ver: 1.2.1)
 '''
 
 def run():
