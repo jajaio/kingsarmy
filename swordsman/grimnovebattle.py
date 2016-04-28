@@ -8,6 +8,7 @@ import load
 import bossanim
 import skull
 import credits
+import town
 
 author="jajaio"
 
@@ -99,7 +100,7 @@ def finish():
     t.sleep(2)
     input('[Press enter to continue.]')
     credits.roll()
-
+    town.hub()
     
 def fight():
     global q, player, monster
