@@ -68,15 +68,21 @@ def island():
         print(c.yellow+'You hike up the great volcano.')
         t.sleep(1)
         d.normal()
-        print(c.yellow+'You are at the peak of the volcano. You begin to hear scratching and clawing against the inside.')
-        t.sleep(2)
-        print('A large goblin crawls out, with a skull mask on.')
-        t.sleep(2)
-        print('You draw your sword and prepare for battle.')
-        monster=cl.Blarney
-        t.sleep(2)
-        input('[Press enter to continue]')
-        blarneybattle.fight()
+        if cl.Player.bcomp == 0:
+            print(c.yellow+'You are at the peak of the volcano. You begin to hear scratching and clawing against the inside.')
+            t.sleep(2)
+            print('A large goblin crawls out, with a skull mask on.')
+            t.sleep(2)
+            print('You draw your sword and prepare for battle.')
+            monster=cl.Blarney
+            t.sleep(2)
+            input('[Press enter to continue]')
+            blarneybattle.fight()
+        elif cl.Player.bcomp != 0:
+            print(c.yellow+"Nothing to see here!")
+            t.sleep(1.25)
+            island()
+
     elif f == "3":
         explore()
     elif f == "4":

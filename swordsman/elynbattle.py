@@ -99,6 +99,7 @@ def finish():
     print('Your Magic Power and Defense stat went up by 1!')
     cl.Player.mp +=1
     cl.Player.deff +=1
+    cl.Player.ecomp +=1
     save.save_game()
     t.sleep(2)
     input('[Game Saved! Press enter to continue.]')

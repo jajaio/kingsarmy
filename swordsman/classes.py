@@ -17,6 +17,9 @@ class Player(Thing):
     xpreq=0
     skulls=0
     wname=None
+    bcomp=0
+    ecomp=0
+    dcomp=0
 
 class Foe(Thing):
     mname="Test mob name"
