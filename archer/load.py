@@ -16,7 +16,9 @@ def load_game():
         cl.Player.xpreq=j['xpreq']
         cl.Player.skulls=j['skulls']
         cl.Player.wname=j['wname']
-
+        cl.Player.bcomp=j['bcomp']
+        cl.Player.ecomp=j['ecomp']
+        cl.Player.dcomp=j['dcomp']
 if __name__=='__main__':
     load_game()
     cl.show_player()

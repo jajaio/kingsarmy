@@ -6,7 +6,7 @@ import anim
 import save
 import load
 import town
-import torch
+import snow
 
 author="jajaio"
 
@@ -76,11 +76,11 @@ def scanner():
         t.sleep(1)
         ter=input("Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()
         if ter == '1':
-            torch.island()
+            snow.mountain()
         elif ter == '2':
             exit()
         else:
-            torch.island()
+            snow.mountain()
     elif monster.hp < 1:
         print(c.yellow+"You won!")
         t.sleep(1)
@@ -90,7 +90,7 @@ def scanner():
         t.sleep(1)
         save.save_game()
         input('[Game Saved! Press enter to continue.]')
-        torch.island()
+        snow.mountain()
 
 
 def fight():

@@ -12,14 +12,14 @@ def select():
     print(c.clear)
     print(c.yellow+"You are flying up in the sky.")
     t.sleep(1)
-    where=input("Would you like to go Torch Island? Skull Woods? Ancient Dunes? Or back to KillFang? (1), (2), (3), (4)"+c.reset+" >>>"+c.violet).strip()
+    where=input("Would you like to go Snow Mountain? Skull Woods? Ancient Dunes? Or back to KillFang? (1), (2), (3), (4)"+c.reset+" >>>"+c.violet).strip()
     if where == '1':
-        print(c.yellow+'You fly down to Torch Island.')
+        print(c.yellow+'You fly down to Snow Mountain.')
         t.sleep(1)
         anim.dragonanim()
-        torch.island()
+        snow.mountain()
     elif where == '2':
-        if cl.Player.wname == 'Dull Blade':
+        if cl.Player.wname == 'Wooden Bow':
             print(c.yellow+'Your weapon is too weak! Go find a new one before you come here.')
             t.sleep(1)
             input('[Press enter to continue]')
@@ -30,7 +30,7 @@ def select():
             anim.dragonanim()
             skull.woods()
     elif where == '3':
-        if cl.Player.wname == 'Dull Blade':
+        if cl.Player.wname == 'Wooden Bow':
             print(c.yellow+'Your weapon is too weak! Go find a new one before you come here.')
             t.sleep(1)
             input('[Press enter to continue.]')

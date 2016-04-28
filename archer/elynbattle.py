@@ -89,16 +89,17 @@ def finish():
     print("You got 125 XP!")
     cl.Player.xp+=125
     t.sleep(1)
-    print("You pry the skull of Elyn's head.")
+    print("You pry the skull off Elyn's head.")
     t.sleep(2)
     print("Dark energy flies everywhere.")
     t.sleep(2)
     print("You got an ancient skull!")
     cl.Player.skulls+=1
     t.sleep(2)
-    print('Your Magic Power and Defence stat went up by 1!')
+    print('Your Magic Power and Defense stat went up by 1!')
     cl.Player.mp +=1
     cl.Player.deff +=1
+    cl.Player.ecomp +=1
     save.save_game()
     t.sleep(2)
     input('[Game Saved! Press enter to continue.]')
