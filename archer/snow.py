@@ -24,7 +24,7 @@ def explore():
             t.sleep(1)
             sword=input('Do you want to take the bow? (Y/N)'+c.reset+" >>>"+c.violet).strip().lower()
             if sword == 'y':
-                print(c.yellow+'As you take the sword, the blade begins to burn with fire.')
+                print(c.yellow+"You picked up the bow, and it's arrows.")
                 t.sleep(1)
                 print("You received Adari's personal Bow, the Sun Bow!")
                 cl.Player.wname="Sun Bow"
@@ -69,6 +69,7 @@ def mountain():
         t.sleep(1)
         d.normal()
         if cl.Player.bcomp == 0:
+            #work on this
             print(c.yellow+'You are at the peak of the volcano. You begin to hear scratching and clawing against the inside.')
             t.sleep(2)
             print('A large goblin crawls out, with a skull mask on.')

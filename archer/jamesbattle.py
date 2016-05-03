@@ -29,13 +29,13 @@ def foeheal():
     if monster.mp<1:
         print(c.yellow+"Your foe tried to heal, but attacked instead!")
         t.sleep(1)
-        bossanim.archerattanim()
+        bossanim.jamesattanim()
         player.hp -= monster.att
         player.hp += player.deff
     else:
         print(c.yellow+"Your foe Heals.")
         t.sleep(1)
-        bossanim.archermpanim()
+        bossanim.jamesmpanim()
         monster.hp+=15
         monster.mp-=1
 
@@ -85,9 +85,9 @@ def scanner():
         finish()
 
 def finish():        
-    print(c.yellow+'You go in for the final blow.')
+    print(c.yellow+'You draw your final arrow.')
     t.sleep(2)
-    print('You stab the archer right through the chest.')
+    print('You shoot the swordsman right through the chest.')
     t.sleep(2)
     print('His body scorched by the flame.')
     t.sleep(2)

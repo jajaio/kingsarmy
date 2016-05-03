@@ -9,7 +9,7 @@ import dotdotdot as d
 import elynbattle
 import grimnovebattle
 import load
-import archerbattle
+import jamesbattle
 
 author="jajaio"
 
@@ -28,7 +28,7 @@ def final():
         print("The battle between Amerus's two chosen heroes begin.")
         t.sleep(2)
         input('[Press enter to continue.]')
-        archerbattle.fight()
+        jamesbattle.fight()
     elif des == '2':
         print(c.yellow+'The archer aims his bow, and you grip your sword.')
         t.sleep(2)

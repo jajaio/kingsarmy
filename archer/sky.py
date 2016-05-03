@@ -1,9 +1,9 @@
 import colors as c
-import torch
 import time as t
 import classes as cl
 import anim
 import town
+import snow
 import skull
 import ancient
 author = 'jajaio'

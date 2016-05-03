@@ -5,7 +5,7 @@ import time as t
 import anim
 import save
 import load
-import torch
+import snow
 import bossanim
 
 author="jajaio"
@@ -75,11 +75,11 @@ def scanner():
         t.sleep(1)
         ter=input(c.yellow+"Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()
         if ter == '1':
-            torch.island()
+            snow.mountain()
         elif ter == '2':
             exit()
         else:
-            torch.island()
+            snow.mountain()
     elif monster.hp < 1:
         finish()
 
@@ -103,7 +103,7 @@ def finish():
     save.save_game()
     t.sleep(2)
     input('[Game Saved! Press enter to continue.]')
-    torch.island()
+    snow.mountain()
 
 def fight():
     global q, player, monster
@@ -116,7 +116,7 @@ def fight():
             t.sleep(1)                                                                                                                                                                               
             ter=input("Do you want to keep playing, or quit? (1), (2)"+c.reset+" >>>"+c.violet).strip()                                                                                          
             if ter == '1':                                                                                                                                                                           
-                torch.island()                                                                                                                                                                                
+                snow.mountain()                                                                                                                                                                                
             elif ter == '2':                                                                                                                                                                         
                 exit()                                                                                                                                                                               
             else:                                                                                                                                                                                    

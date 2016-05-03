@@ -86,11 +86,11 @@ def scanner():
         finish()
 
 def finish():        
-    print(c.yellow+'You go in for the final blow.')
+    print(c.yellow+'You draw your last arrow.')
     t.sleep(2)
-    print('Flameblade unleashes a large burning flame.')
+    print('The swordsman shoots a beam of fire out from his sword.')
     t.sleep(2)
-    print("An arrow punctures Grimnove's head")
+    print("Your arrow punctures Grimnove's head")
     t.sleep(2)
     print("Light begins to spurt out from Grimnove's broken body")
     t.sleep(2)
