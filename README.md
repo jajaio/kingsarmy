@@ -12,4 +12,4 @@ edition. Since I've been out of school, I've been pretty lazy on
 any programming projects. I assume more will be added whenever I have
 the drive to work.
 
--June 6th 2016
+-June 6th, 2016
